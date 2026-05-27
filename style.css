@@ -1,123 +1,251 @@
 body{
-  margin:0;
-  background:#f7f3ed;
-  font-family:'Cormorant Garamond', serif;
-  color:#2f2418;
+margin:0;
+padding:0;
+background:#f6f1ea;
+font-family:'Cormorant Garamond', serif;
+color:#2f2418;
+overflow-x:hidden;
 }
 
 .container{
-  width:90%;
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  padding:40px 20px;
+width:90%;
+max-width:900px;
+margin:auto;
+text-align:center;
+padding:40px 20px 80px;
+position:relative;
 }
 
 .logo{
-  width:90px;
+width:95px;
+margin-bottom:10px;
 }
 
 h1{
-  font-size:52px;
-  margin-top:20px;
+font-size:58px;
+margin:10px 0;
+font-weight:700;
+letter-spacing:1px;
 }
 
 .subtitle{
-  color:#b78628;
-  letter-spacing:3px;
-  font-size:20px;
+font-family:'Inter', sans-serif;
+font-size:18px;
+letter-spacing:4px;
+color:#b78628;
+margin-bottom:20px;
+}
+
+.divider{
+width:180px;
+height:2px;
+background:#d8b36b;
+margin:20px auto 40px;
+border-radius:10px;
 }
 
 .search-box{
-  display:flex;
-  margin:40px auto;
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid #e0d4c0;
+display:flex;
+background:white;
+border-radius:18px;
+overflow:hidden;
+border:1px solid #e6d8c3;
+box-shadow:0 4px 12px rgba(0,0,0,0.04);
+margin-bottom:30px;
 }
 
 .search-box input{
-  flex:1;
-  padding:20px;
-  border:none;
-  font-size:20px;
-  outline:none;
+flex:1;
+padding:24px;
+border:none;
+font-size:22px;
+font-family:'Cormorant Garamond', serif;
+background:white;
+outline:none;
 }
 
 .search-box button{
-  background:#c99932;
-  color:white;
-  border:none;
-  padding:20px 35px;
-  font-size:18px;
+background:#d4a23a;
+color:white;
+border:none;
+padding:0 35px;
+font-size:22px;
+font-family:'Cormorant Garamond', serif;
+font-weight:600;
+cursor:pointer;
 }
 
 .card{
-  background:#fffdf9;
-  border-radius:24px;
-  padding:40px;
-  border:1px solid #e7dbc6;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+background:#fffdfa;
+border-radius:28px;
+padding:50px;
+border:1px solid #e7dbc6;
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
 }
 
 .shield{
-  font-size:70px;
-  color:#c99932;
+width:100px;
+height:100px;
+line-height:100px;
+border-radius:50%;
+background:#f4d79b;
+color:#9b6a14;
+font-size:55px;
+margin:auto;
+font-weight:bold;
 }
 
 h2{
-  font-size:46px;
-  color:#2f5b2f;
+font-size:56px;
+margin:25px 0 10px;
+color:#2f5b2f;
 }
 
 .desc{
-  font-size:24px;
+font-size:28px;
+margin-bottom:10px;
 }
 
 h3{
-  font-size:38px;
+font-size:46px;
+margin:10px 0;
 }
 
 .small{
-  font-size:22px;
+font-size:28px;
+margin-bottom:35px;
 }
 
 table{
-  width:100%;
-  margin-top:30px;
-  border-collapse:collapse;
+width:100%;
+border-collapse:collapse;
+background:#fffdfa;
+border:1px solid #eadcc8;
+border-radius:18px;
+overflow:hidden;
+margin-top:20px;
 }
 
 td{
-  padding:18px;
-  border-bottom:1px solid #eee;
-  font-size:24px;
-  text-align:left;
+padding:22px;
+font-size:28px;
+border-bottom:1px solid #eee;
+text-align:left;
+}
+
+.highlight{
+color:#c18a22;
+font-weight:700;
 }
 
 .valid-box{
-  margin-top:30px;
-  background:#e7f5df;
-  color:#1e7a1e;
-  padding:25px;
-  border-radius:18px;
-  font-size:36px;
-  font-weight:bold;
+margin-top:35px;
+background:#edf7e7;
+border:1px solid #c9dfbb;
+border-radius:20px;
+padding:28px;
+display:flex;
+align-items:center;
+gap:20px;
+justify-content:center;
 }
 
-.ttd{
-  margin-top:40px;
-  font-size:24px;
+.check{
+width:70px;
+height:70px;
+line-height:70px;
+background:#31b531;
+color:white;
+border-radius:50%;
+font-size:40px;
+font-weight:bold;
+}
+
+.valid-title{
+font-size:38px;
+font-weight:700;
+color:#218321;
+text-align:left;
+}
+
+.valid-desc{
+font-size:22px;
+text-align:left;
+}
+
+.signed{
+margin-top:45px;
+font-size:28px;
 }
 
 h4{
-  font-size:36px;
-  margin-bottom:5px;
+font-size:42px;
+margin:10px 0;
+}
+
+.jabatan{
+font-size:28px;
+}
+
+.bottom-divider{
+width:240px;
+height:2px;
+background:#d6a64a;
+margin:35px auto 0;
+}
+
+.info-box{
+margin-top:28px;
+background:#fbf7f0;
+border:1px solid #e2d5bf;
+border-radius:18px;
+padding:28px;
+font-size:24px;
+line-height:1.8;
 }
 
 .footer{
-  margin-top:50px;
-  font-size:20px;
-  color:#6f624d;
+margin-top:55px;
+font-size:22px;
+line-height:1.8;
+color:#6b5d49;
+}
+
+.footer strong{
+font-size:28px;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:36px;
+}
+
+h3{
+font-size:28px;
+}
+
+td{
+font-size:18px;
+padding:14px;
+}
+
+.card{
+padding:25px;
+}
+
+.search-box input{
+font-size:18px;
+padding:18px;
+}
+
+.search-box button{
+font-size:18px;
+padding:0 20px;
+}
+
 }
