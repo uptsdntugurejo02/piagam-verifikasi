@@ -14,9 +14,9 @@ overflow-x:hidden;
 .ornament{
 position:fixed;
 top:0;
-width:260px;
-height:260px;
-opacity:0.08;
+width:240px;
+height:240px;
+opacity:0.07;
 pointer-events:none;
 z-index:0;
 }
@@ -41,22 +41,24 @@ z-index:2;
 width:100%;
 max-width:920px;
 margin:auto;
-padding:36px 24px 70px;
+padding:36px 20px 70px;
 }
 
 .logo{
-width:90px;
+width:120px;
+max-width:28vw;
 display:block;
 margin:auto;
 margin-bottom:14px;
+object-fit:contain;
 }
 
 h1{
 text-align:center;
 font-size:64px;
 font-weight:700;
-color:#2e2117;
-line-height:1.1;
+color:#2d2117;
+line-height:1.05;
 }
 
 .subtitle{
@@ -82,8 +84,8 @@ position:absolute;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
-width:26px;
-height:26px;
+width:24px;
+height:24px;
 border-radius:50%;
 border:2px solid #d8b16b;
 background:#f6f1ea;
@@ -92,7 +94,7 @@ background:#f6f1ea;
 .search-box{
 display:flex;
 align-items:center;
-height:76px;
+width:100%;
 background:#fff;
 border:1px solid #e3d8c6;
 border-radius:18px;
@@ -100,6 +102,7 @@ overflow:hidden;
 box-shadow:
 0 6px 18px rgba(0,0,0,0.04);
 margin-bottom:28px;
+min-height:76px;
 }
 
 .search-icon{
@@ -109,6 +112,7 @@ align-items:center;
 justify-content:center;
 font-size:28px;
 color:#c38d26;
+flex-shrink:0;
 }
 
 .search-box input{
@@ -120,6 +124,8 @@ font-size:24px;
 font-family:'Cormorant Garamond',serif;
 padding-right:16px;
 color:#5f5346;
+min-width:0;
+background:transparent;
 }
 
 .search-box input::placeholder{
@@ -129,7 +135,7 @@ color:#9f9486;
 .search-box button{
 height:58px;
 margin-right:10px;
-padding:0 26px;
+padding:0 24px;
 border:none;
 border-radius:14px;
 background:#cf9a34;
@@ -140,7 +146,10 @@ font-weight:700;
 cursor:pointer;
 display:flex;
 align-items:center;
+justify-content:center;
 gap:10px;
+white-space:nowrap;
+flex-shrink:0;
 }
 
 .card{
@@ -153,11 +162,12 @@ linear-gradient(
 );
 border:1px solid #dfe7d8;
 border-radius:28px;
-padding:54px 56px 40px;
+padding:54px 48px 40px;
 box-shadow:
 0 10px 30px rgba(0,0,0,0.05),
 0 2px 6px rgba(0,0,0,0.02);
 overflow:hidden;
+width:100%;
 }
 
 .card::before{
@@ -322,8 +332,8 @@ margin:auto;
 }
 
 .small-divider{
-width:22px;
-height:22px;
+width:20px;
+height:20px;
 background:#fffdfa;
 }
 
@@ -345,6 +355,7 @@ color:#4b3d30;
 font-size:30px;
 color:#c6932d;
 margin-top:2px;
+flex-shrink:0;
 }
 
 .footer{
@@ -379,6 +390,7 @@ font-size:24px !important;
 .repo{
 margin-top:18px;
 font-size:20px !important;
+word-break:break-word;
 }
 
 .copyright{
@@ -393,53 +405,70 @@ padding:20px 14px 40px;
 }
 
 .logo{
-width:74px;
+width:96px;
+max-width:34vw;
+margin-bottom:10px;
 }
 
 h1{
 font-size:34px;
+line-height:1.15;
 }
 
 .subtitle{
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
+margin-top:10px;
+}
+
+.divider{
+width:140px;
+margin:18px auto 26px;
 }
 
 .search-box{
-height:64px;
+min-height:62px;
+border-radius:16px;
 }
 
 .search-icon{
-width:58px;
-font-size:22px;
+width:54px;
+font-size:20px;
 }
 
 .search-box input{
-font-size:18px;
+font-size:17px;
+padding-right:8px;
 }
 
 .search-box button{
-height:48px;
-padding:0 18px;
-font-size:16px;
+height:46px;
+padding:0 16px;
+font-size:15px;
+margin-right:8px;
+border-radius:12px;
+gap:6px;
 }
 
 .card{
-padding:30px 20px;
+padding:28px 18px 26px;
 border-radius:22px;
 }
 
 .shield{
-width:84px;
-height:84px;
+width:82px;
+height:82px;
+margin-bottom:14px;
 }
 
 .shield i{
-font-size:40px;
+font-size:38px;
 }
 
 h2{
 font-size:34px;
+line-height:1.1;
+margin-bottom:10px;
 }
 
 .desc{
@@ -447,24 +476,55 @@ font-size:18px;
 }
 
 h3{
-font-size:28px;
+font-size:29px;
+line-height:1.2;
 }
 
 .small{
 font-size:20px;
+margin-bottom:24px;
+}
+
+table{
+border-radius:14px;
 }
 
 td{
-font-size:18px;
-padding:14px;
+font-size:17px;
+padding:14px 12px;
+line-height:1.3;
+}
+
+td:first-child{
+width:36%;
+}
+
+.valid-box{
+padding:18px;
+gap:14px;
+border-radius:16px;
+}
+
+.check{
+width:54px;
+height:54px;
+}
+
+.check i{
+font-size:24px;
 }
 
 .valid-title{
-font-size:28px;
+font-size:26px;
 }
 
 .valid-desc{
-font-size:16px;
+font-size:15px;
+line-height:1.4;
+}
+
+.signed{
+font-size:18px;
 }
 
 h4{
@@ -472,20 +532,49 @@ font-size:30px;
 }
 
 .jabatan{
-font-size:20px;
+font-size:19px;
+line-height:1.4;
+}
+
+.bottom-divider{
+width:180px;
 }
 
 .info-box{
-font-size:18px;
+font-size:16px;
 padding:18px;
+line-height:1.6;
+border-radius:14px;
+gap:12px;
+}
+
+.info-icon{
+font-size:22px;
+}
+
+.footer{
+margin-top:36px;
 }
 
 .footer p{
-font-size:16px;
+font-size:15px;
+line-height:1.6;
 }
 
 .footer strong{
-font-size:22px;
+font-size:20px;
+}
+
+.creator{
+font-size:17px !important;
+}
+
+.repo{
+font-size:13px !important;
+}
+
+.copyright{
+font-size:13px !important;
 }
 
 }
