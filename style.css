@@ -1,119 +1,171 @@
-body{
+*{
 margin:0;
 padding:0;
-background:#f6f1ea;
+box-sizing:border-box;
+}
+
+body{
+background:#f7f3ed;
 font-family:'Cormorant Garamond', serif;
 color:#2f2418;
 overflow-x:hidden;
 }
 
 .container{
-width:90%;
-max-width:900px;
+width:100%;
+max-width:920px;
 margin:auto;
-text-align:center;
-padding:40px 20px 80px;
+padding:32px 24px 60px;
 position:relative;
 }
 
 .logo{
-width:95px;
-margin-bottom:10px;
+width:82px;
+display:block;
+margin:0 auto 18px;
 }
 
 h1{
-font-size:58px;
-margin:10px 0;
+text-align:center;
+font-size:64px;
 font-weight:700;
 letter-spacing:1px;
+line-height:1.05;
+color:#2d2117;
 }
 
 .subtitle{
+text-align:center;
+margin-top:14px;
 font-family:'Inter', sans-serif;
-font-size:18px;
+font-size:16px;
 letter-spacing:4px;
-color:#b78628;
-margin-bottom:20px;
+color:#bc8d35;
+font-weight:500;
 }
 
 .divider{
 width:180px;
 height:2px;
-background:#d8b36b;
-margin:20px auto 40px;
-border-radius:10px;
+background:#d6b06a;
+margin:22px auto 36px;
+position:relative;
 }
 
 .search-box{
 display:flex;
-background:white;
+align-items:center;
+background:#fff;
+border:1px solid #e5d9c8;
 border-radius:18px;
 overflow:hidden;
-border:1px solid #e6d8c3;
-box-shadow:0 4px 12px rgba(0,0,0,0.04);
-margin-bottom:30px;
+height:76px;
+box-shadow:0 4px 14px rgba(0,0,0,0.03);
+margin-bottom:28px;
 }
 
 .search-box input{
 flex:1;
-padding:24px;
+height:100%;
 border:none;
+padding:0 26px;
 font-size:22px;
 font-family:'Cormorant Garamond', serif;
-background:white;
+background:transparent;
 outline:none;
+color:#5f5141;
+}
+
+.search-box input::placeholder{
+color:#9f9385;
 }
 
 .search-box button{
-background:#d4a23a;
-color:white;
+height:58px;
+margin-right:10px;
+padding:0 28px;
 border:none;
-padding:0 35px;
-font-size:22px;
-font-family:'Cormorant Garamond', serif;
+border-radius:14px;
+background:#cf9a34;
+color:white;
+font-size:18px;
 font-weight:600;
+font-family:'Cormorant Garamond', serif;
 cursor:pointer;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .card{
 background:#fffdfa;
-border-radius:28px;
-padding:50px;
-border:1px solid #e7dbc6;
-box-shadow:0 8px 24px rgba(0,0,0,0.05);
+border:1px solid #dfe6d8;
+border-radius:26px;
+padding:54px 56px 40px;
+position:relative;
+box-shadow:
+0 10px 30px rgba(0,0,0,0.04),
+0 2px 6px rgba(0,0,0,0.02);
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center,
+rgba(214,176,106,0.05),
+transparent 70%);
+pointer-events:none;
 }
 
 .shield{
-width:100px;
-height:100px;
-line-height:100px;
+width:110px;
+height:110px;
 border-radius:50%;
-background:#f4d79b;
-color:#9b6a14;
-font-size:55px;
-margin:auto;
-font-weight:bold;
+margin:0 auto 18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:58px;
+color:#c89229;
+background:
+linear-gradient(
+145deg,
+#fff5d9,
+#f3d38d
+);
+box-shadow:
+inset 0 2px 4px rgba(255,255,255,0.8),
+0 4px 10px rgba(0,0,0,0.05);
 }
 
 h2{
-font-size:56px;
-margin:25px 0 10px;
-color:#2f5b2f;
+text-align:center;
+font-size:58px;
+color:#2e5a2e;
+font-weight:700;
+margin-bottom:12px;
 }
 
 .desc{
-font-size:28px;
+text-align:center;
+font-size:24px;
 margin-bottom:10px;
 }
 
 h3{
-font-size:46px;
-margin:10px 0;
+text-align:center;
+font-size:48px;
+font-weight:700;
+margin-bottom:4px;
 }
 
 .small{
+text-align:center;
 font-size:28px;
-margin-bottom:35px;
+margin-bottom:34px;
 }
 
 table{
@@ -123,110 +175,179 @@ background:#fffdfa;
 border:1px solid #eadcc8;
 border-radius:18px;
 overflow:hidden;
-margin-top:20px;
+margin-bottom:28px;
+}
+
+tr{
+border-bottom:1px solid #ece7df;
+}
+
+tr:last-child{
+border-bottom:none;
 }
 
 td{
-padding:22px;
+padding:22px 26px;
 font-size:28px;
-border-bottom:1px solid #eee;
-text-align:left;
+}
+
+td:first-child{
+width:38%;
+color:#33261a;
 }
 
 .highlight{
-color:#c18a22;
+color:#c08a24;
 font-weight:700;
 }
 
 .valid-box{
-margin-top:35px;
-background:#edf7e7;
-border:1px solid #c9dfbb;
-border-radius:20px;
-padding:28px;
+background:#edf8e6;
+border:1px solid #cfe0c2;
+border-radius:18px;
+padding:24px 28px;
 display:flex;
 align-items:center;
-gap:20px;
-justify-content:center;
+gap:18px;
+margin-bottom:34px;
 }
 
 .check{
-width:70px;
-height:70px;
-line-height:70px;
-background:#31b531;
-color:white;
+width:66px;
+height:66px;
 border-radius:50%;
-font-size:40px;
+background:#31b531;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:38px;
 font-weight:bold;
+flex-shrink:0;
 }
 
 .valid-title{
-font-size:38px;
+font-size:40px;
 font-weight:700;
-color:#218321;
-text-align:left;
+color:#208320;
+line-height:1;
+margin-bottom:4px;
 }
 
 .valid-desc{
 font-size:22px;
-text-align:left;
 }
 
 .signed{
-margin-top:45px;
-font-size:28px;
+text-align:center;
+font-size:24px;
+margin-bottom:8px;
 }
 
 h4{
-font-size:42px;
-margin:10px 0;
+text-align:center;
+font-size:44px;
+font-weight:700;
+margin-bottom:4px;
 }
 
 .jabatan{
+text-align:center;
 font-size:28px;
+margin-bottom:22px;
 }
 
 .bottom-divider{
-width:240px;
+width:380px;
 height:2px;
 background:#d6a64a;
-margin:35px auto 0;
+margin:0 auto;
+position:relative;
 }
 
 .info-box{
-margin-top:28px;
+margin-top:24px;
 background:#fbf7f0;
-border:1px solid #e2d5bf;
+border:1px solid #e3d7c5;
 border-radius:18px;
-padding:28px;
+padding:24px 28px;
 font-size:24px;
-line-height:1.8;
+line-height:1.7;
+color:#4a3d2f;
 }
 
 .footer{
-margin-top:55px;
+margin-top:40px;
+text-align:center;
 font-size:22px;
 line-height:1.8;
-color:#6b5d49;
+color:#6b5c4b;
 }
 
 .footer strong{
 font-size:28px;
+font-weight:700;
 }
 
 @media(max-width:768px){
+
+.container{
+padding:20px 14px 40px;
+}
+
+.logo{
+width:72px;
+}
 
 h1{
 font-size:34px;
 }
 
+.subtitle{
+font-size:12px;
+letter-spacing:2px;
+}
+
+.search-box{
+height:64px;
+}
+
+.search-box input{
+font-size:18px;
+padding:0 18px;
+}
+
+.search-box button{
+height:48px;
+padding:0 18px;
+font-size:16px;
+}
+
+.card{
+padding:30px 20px;
+border-radius:20px;
+}
+
+.shield{
+width:84px;
+height:84px;
+font-size:44px;
+}
+
 h2{
-font-size:36px;
+font-size:34px;
+}
+
+.desc{
+font-size:18px;
 }
 
 h3{
 font-size:28px;
+}
+
+.small{
+font-size:20px;
 }
 
 td{
@@ -234,18 +355,28 @@ font-size:18px;
 padding:14px;
 }
 
-.card{
-padding:25px;
+.valid-title{
+font-size:28px;
 }
 
-.search-box input{
-font-size:18px;
-padding:18px;
+.valid-desc{
+font-size:16px;
 }
 
-.search-box button{
+h4{
+font-size:30px;
+}
+
+.jabatan{
+font-size:20px;
+}
+
+.info-box{
 font-size:18px;
-padding:0 20px;
+}
+
+.footer{
+font-size:16px;
 }
 
 }
