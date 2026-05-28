@@ -126,14 +126,15 @@ align-items:center;
 
 .pdf-icon i{
 font-size:32px;
-color:#ef4444;
+color:#2563eb;
 }
 
 .pdf-name{
-font-size:20px;
+font-size:18px;
 font-weight:700;
-line-height:1.4;
+line-height:1.5;
 margin-bottom:6px;
+word-break:break-word;
 }
 
 .pdf-pages{
@@ -353,7 +354,7 @@ width:100%;
 }
 
 .pdf-name{
-font-size:18px;
+font-size:16px;
 }
 
 .view-btn{
