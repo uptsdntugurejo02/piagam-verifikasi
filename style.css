@@ -6,431 +6,272 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:
-linear-gradient(rgba(248,245,239,.96),rgba(248,245,239,.96)),
-url('https://www.transparenttextures.com/patterns/arabesque.png');
-background-color:#f8f5ef;
+background:#f5f6f8;
+color:#1f2937;
+}
+
+.app{
+max-width:480px;
+margin:auto;
 min-height:100vh;
-color:#2f2419;
-overflow-x:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.container{
-width:100%;
-max-width:1050px;
-}
-
-.top{
-text-align:center;
-margin-bottom:18px;
-}
-
-.logo{
-width:130px;
-height:auto;
-display:block;
-margin:0 auto 18px;
-filter:drop-shadow(0 6px 16px rgba(0,0,0,.15));
-}
-
-h1{
-font-family:'Cinzel',serif;
-font-size:62px;
-font-weight:700;
-line-height:1;
-color:#2b1d17;
-margin-bottom:12px;
-}
-
-.subtitle{
-font-size:18px;
-font-weight:600;
-letter-spacing:4px;
-color:#c89b35;
-margin-bottom:18px;
-}
-
-.ornament{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:14px;
-margin-bottom:20px;
-}
-
-.ornament-line{
-width:120px;
-height:2px;
-background:linear-gradient(to right,transparent,#d6b15b,transparent);
-}
-
-.ornament-circle{
-width:24px;
-height:24px;
-border:3px solid #d7b462;
-border-radius:50%;
 background:white;
 }
 
-.search-wrap{
-display:flex;
-gap:14px;
-margin-bottom:20px;
-}
-
-.search-box{
-flex:1;
+.topbar{
+height:72px;
 display:flex;
 align-items:center;
-background:#fff;
-border-radius:22px;
 padding:0 22px;
-height:66px;
-box-shadow:0 8px 24px rgba(0,0,0,.05);
-border:1px solid #eadfcb;
+gap:18px;
+border-bottom:1px solid #ececec;
 }
 
-.search-box i{
-font-size:24px;
-color:#c9982b;
-margin-right:14px;
-}
-
-.search-box input{
-width:100%;
-border:none;
-outline:none;
-background:transparent;
-font-family:'Inter',sans-serif;
-font-size:19px;
-font-weight:500;
-}
-
-.search-btn{
-width:240px;
-border:none;
-border-radius:22px;
-background:linear-gradient(145deg,#d6a132,#b97b0f);
-color:white;
+.topbar i{
 font-size:22px;
+color:#555;
+}
+
+.topbar h1{
+font-size:26px;
 font-weight:700;
-cursor:pointer;
-box-shadow:0 10px 26px rgba(185,123,15,.25);
 }
 
-.result{
-background:
-linear-gradient(rgba(255,255,255,.96),rgba(255,251,246,.96)),
-url('https://www.transparenttextures.com/patterns/cream-paper.png');
-
-border-radius:34px;
-padding:34px;
-border:1px solid #e4d9c6;
-box-shadow:0 10px 40px rgba(0,0,0,.06);
-margin-bottom:20px;
+.content{
+padding:28px 22px 40px;
 }
 
-.shield{
-text-align:center;
-margin-bottom:16px;
-}
-
-.shield i{
-font-size:72px;
-color:#d4a12c;
-background:radial-gradient(circle,#fff8d4,#f3e4aa);
-width:130px;
-height:130px;
-line-height:130px;
-border-radius:50%;
-}
-
-.result-title{
-font-family:'Cinzel',serif;
-font-size:54px;
-font-weight:700;
-color:#2f6133;
-text-align:center;
-line-height:1.05;
-margin-bottom:12px;
-}
-
-.desc{
-text-align:center;
-font-size:24px;
-margin-bottom:8px;
-}
-
-.school{
-font-family:'Cinzel',serif;
-font-size:42px;
-font-weight:700;
-text-align:center;
-line-height:1.1;
-margin-bottom:4px;
-}
-
-.city{
-text-align:center;
-font-size:22px;
+.logo{
+width:110px;
+display:block;
+margin:auto;
 margin-bottom:24px;
 }
 
-.info-box{
-background:rgba(255,255,255,.76);
-border:1px solid #efd7b6;
-border-radius:22px;
-padding:14px 24px;
-margin-bottom:18px;
-}
-
-.row{
-display:grid;
-grid-template-columns:240px 1fr;
-padding:16px 0;
-border-bottom:1px solid #eee4d6;
-gap:20px;
-}
-
-.row:last-child{
-border:none;
-}
-
-.label{
-font-size:20px;
-font-weight:600;
-}
-
-.value{
-font-size:20px;
-font-weight:600;
-word-break:break-word;
-}
-
-.gold{
-color:#c58b18;
-}
-
-.valid{
+.hero-icon{
+width:120px;
+height:120px;
+border-radius:50%;
+background:#e8f7ed;
 display:flex;
+justify-content:center;
 align-items:center;
-gap:22px;
-background:linear-gradient(145deg,#edf8e7,#f7f6e4);
-border:1px solid #cfe2b6;
-border-radius:20px;
-padding:18px 24px;
-margin-bottom:18px;
+margin:auto;
+margin-bottom:22px;
 }
 
-.valid i{
-font-size:58px;
-color:#30bf31;
+.hero-icon i{
+font-size:70px;
+color:#16a34a;
 }
 
-.valid-title{
-font-size:38px;
-font-weight:700;
-color:#21872d;
-margin-bottom:6px;
-}
-
-.valid-desc{
-font-size:18px;
-}
-
-.sign{
+h2{
+font-size:42px;
+font-weight:800;
+line-height:1.15;
 text-align:center;
-margin-bottom:16px;
+margin-bottom:12px;
 }
 
-.sign-title{
-font-family:'Cinzel',serif;
-font-size:28px;
-margin-bottom:10px;
+.sub{
+text-align:center;
+font-size:18px;
+color:#6b7280;
+line-height:1.6;
+margin-bottom:34px;
 }
 
-.sign-name{
-font-family:'Cinzel',serif;
-font-size:40px;
-font-weight:700;
-margin-bottom:8px;
+.doc-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border:1px solid #e5e7eb;
+border-radius:20px;
+margin-bottom:34px;
 }
 
-.sign-role{
-font-size:22px;
+.doc-left{
+display:flex;
+gap:16px;
+align-items:center;
 }
 
-.bottom-ornament{
+.pdf-icon{
+width:58px;
+height:58px;
+border-radius:16px;
+background:#f3f4f6;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:14px;
-margin-bottom:20px;
 }
 
-.bottom-ornament i{
-font-size:24px;
-color:#d3a54d;
+.pdf-icon i{
+font-size:28px;
+color:#ef4444;
 }
 
-.notice{
-display:flex;
-align-items:flex-start;
-gap:18px;
-background:rgba(255,250,243,.9);
-border:1px solid #e8d8bc;
-border-radius:20px;
-padding:18px 22px;
+.doc-name{
+font-size:18px;
+font-weight:700;
+margin-bottom:6px;
+}
+
+.doc-pages{
+font-size:15px;
+color:#6b7280;
+}
+
+.view-btn{
+font-size:18px;
+font-weight:700;
+color:#2563eb;
+}
+
+.section-title{
+font-size:15px;
+font-weight:700;
+color:#888;
 margin-bottom:18px;
 }
 
-.notice i{
-font-size:24px;
-color:#d39a27;
-padding-top:4px;
+.signature-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:22px;
+border-bottom:1px solid #ececec;
+margin-bottom:26px;
 }
 
-.notice-text{
-font-size:17px;
+.sign-left{
+display:flex;
+gap:14px;
+align-items:center;
+}
+
+.sign-avatar{
+width:54px;
+height:54px;
+border-radius:50%;
+background:#f3f4f6;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.sign-avatar i{
+font-size:24px;
+color:#666;
+}
+
+.sign-name{
+font-size:22px;
+font-weight:700;
+margin-bottom:4px;
+}
+
+.sign-company{
+font-size:16px;
+color:#6b7280;
+}
+
+.trusted{
+background:#dcfce7;
+color:#15803d;
+padding:10px 16px;
+border-radius:14px;
+font-size:16px;
+font-weight:700;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.detail-card{
+background:#fafafa;
+border-radius:22px;
+padding:24px;
+margin-bottom:26px;
+}
+
+.detail-row{
+display:flex;
+flex-direction:column;
+gap:8px;
+padding:16px 0;
+border-bottom:1px solid #ececec;
+}
+
+.detail-row:last-child{
+border:none;
+}
+
+.detail-row span{
+font-size:15px;
+color:#6b7280;
+}
+
+.detail-row strong{
+font-size:18px;
+line-height:1.6;
+}
+
+.info-box{
+background:#f3f4f6;
+padding:20px;
+border-radius:18px;
+font-size:15px;
 line-height:1.7;
+color:#555;
+margin-bottom:28px;
+}
+
+.verify-btn{
+width:100%;
+height:62px;
+border:none;
+border-radius:18px;
+background:#16a34a;
+color:white;
+font-size:20px;
+font-weight:700;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+cursor:pointer;
 }
 
 .footer{
 text-align:center;
-color:#8b7968;
-font-size:16px;
-line-height:1.8;
-}
-
-.footer strong{
-font-size:20px;
-color:#2c241d;
-}
-
-.footer a{
-color:#8b6e4f;
-text-decoration:none;
-word-break:break-word;
-}
-
-.footer-icons{
-margin:10px 0;
-color:#d4a12c;
-font-size:22px;
-display:flex;
-justify-content:center;
-gap:18px;
+margin-top:28px;
+font-size:14px;
+color:#777;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:480px){
 
-body{
-padding:14px;
+h2{
+font-size:34px;
 }
 
-.logo{
-width:90px;
-}
-
-h1{
-font-size:58px;
-line-height:.95;
-}
-
-.subtitle{
-font-size:13px;
-letter-spacing:2px;
-}
-
-.search-wrap{
+.doc-card{
 flex-direction:column;
+align-items:flex-start;
+gap:18px;
 }
 
-.search-box{
-height:58px;
-border-radius:18px;
+.signature-card{
+flex-direction:column;
+align-items:flex-start;
+gap:18px;
 }
 
-.search-btn{
-width:100%;
-height:58px;
-border-radius:18px;
-}
-
-.result{
-padding:22px 16px;
-}
-
-.shield i{
-width:95px;
-height:95px;
-line-height:95px;
-font-size:48px;
-}
-
-.result-title{
-font-size:42px;
-}
-
-.desc{
-font-size:18px;
-}
-
-.school{
-font-size:28px;
-}
-
-.city{
-font-size:18px;
-}
-
-.row{
-grid-template-columns:1fr;
-gap:8px;
-}
-
-.label,
-.value{
-font-size:17px;
-}
-
-.valid{
-padding:16px;
-gap:14px;
-}
-
-.valid-title{
-font-size:28px;
-}
-
-.valid-desc{
-font-size:15px;
-}
-
-.sign-title{
-font-size:20px;
-}
-
-.sign-name{
-font-size:32px;
-}
-
-.sign-role{
-font-size:17px;
-}
-
-.notice{
-padding:16px;
-}
-
-.notice-text{
-font-size:15px;
+.trusted{
+align-self:flex-start;
 }
 
 }
