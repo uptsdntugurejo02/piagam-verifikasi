@@ -1,113 +1,757 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Verifikasi Piagam Online</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+
+background:
+linear-gradient(rgba(248,245,239,.96),rgba(248,245,239,.96)),
+url('https://www.transparenttextures.com/patterns/arabesque.png');
+
+background-size:cover;
+
+height:100vh;
+
+overflow:hidden;
+
+color:#2f241c;
+}
+
+/* CONTAINER */
+
+.container{
+width:94%;
+max-width:1180px;
+
+height:96vh;
+
+margin:2vh auto;
+
+padding:18px 28px;
+
+background:rgba(255,255,255,.74);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+box-shadow:
+0 12px 40px rgba(0,0,0,.08);
+
+display:flex;
+flex-direction:column;
+
+overflow:hidden;
+}
+
+/* LOGO */
+
+.logo{
+width:115px;
+
+display:block;
+margin:0 auto 8px;
+
+filter:
+drop-shadow(0 4px 12px rgba(0,0,0,.15));
+}
+
+/* TITLE */
+
+h1{
+font-family:'Cinzel',serif;
+
+font-size:54px;
+font-weight:700;
+
+line-height:1.05;
+
+text-align:center;
+
+color:#2c1f16;
+
+margin-bottom:8px;
+}
+
+.subtitle{
+text-align:center;
+
+font-size:16px;
+font-weight:600;
+
+letter-spacing:5px;
+
+color:#c49b4a;
+
+margin-bottom:18px;
+}
+
+/* ORNAMENT */
+
+.ornament{
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+margin-bottom:22px;
+}
+
+.ornament .line{
+width:120px;
+height:2px;
+
+background:#d2b06b;
+}
+
+.ornament .circle{
+width:22px;
+height:22px;
+
+border:3px solid #d2b06b;
+
+border-radius:50%;
+}
+
+/* SEARCH */
+
+.search-wrap{
+display:flex;
+gap:12px;
+
+margin-bottom:20px;
+}
+
+.search-box{
+flex:1;
+
+display:flex;
+align-items:center;
+
+background:#fff;
+
+border-radius:20px;
+
+padding:0 20px;
+
+height:62px;
+
+border:1px solid #e6dccd;
+
+box-shadow:
+0 4px 14px rgba(0,0,0,.04);
+}
+
+.search-box i{
+font-size:22px;
+
+color:#c89b39;
+
+margin-right:14px;
+}
+
+.search-box input{
+border:none;
+outline:none;
+
+width:100%;
+
+font-size:18px;
+
+font-family:'Inter',sans-serif;
+
+background:transparent;
+}
+
+button{
+width:240px;
+
+border:none;
+
+border-radius:20px;
+
+background:
+linear-gradient(145deg,#d5a342,#b9841f);
+
+color:white;
+
+font-size:18px;
+font-weight:700;
+
+cursor:pointer;
+
+transition:.25s;
+
+box-shadow:
+0 6px 18px rgba(181,130,26,.3);
+}
+
+button:hover{
+transform:translateY(-2px);
+}
+
+/* RESULT */
+
+.result{
+flex:1;
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.97),
+rgba(255,252,247,.97)
+);
+
+border-radius:30px;
+
+padding:24px 36px;
+
+border:1px solid #dfe7d7;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.result::before{
+content:"";
+
+position:absolute;
+inset:0;
+
+background:
+url('https://www.transparenttextures.com/patterns/white-diamond.png');
+
+opacity:.05;
+}
+
+/* SHIELD */
+
+.shield{
+text-align:center;
+
+margin-bottom:12px;
+}
+
+.shield i{
+font-size:68px;
+
+color:#d3a03d;
+
+background:#fff5d8;
+
+width:120px;
+height:120px;
+
+line-height:120px;
+
+border-radius:50%;
+
+box-shadow:
+0 10px 24px rgba(212,163,59,.18);
+}
+
+/* VERIFIED */
+
+.verified-title{
+font-family:'Cinzel',serif;
+
+font-size:44px;
+font-weight:700;
+
+text-align:center;
+
+color:#2d5f33;
+
+margin-bottom:8px;
+}
+
+.desc{
+text-align:center;
+
+font-size:18px;
+
+line-height:1.6;
+
+margin-bottom:18px;
+}
+
+.school{
+font-family:'Cinzel',serif;
+
+font-size:28px;
+font-weight:700;
+
+text-align:center;
+
+margin-bottom:4px;
+}
+
+.city{
+text-align:center;
+
+font-size:18px;
+
+margin-bottom:20px;
+}
+
+/* TABLE */
+
+.info-box{
+background:rgba(255,255,255,.72);
+
+border:1px solid #ead9ba;
+
+border-radius:20px;
+
+padding:10px 24px;
+
+margin-bottom:20px;
+}
+
+.row{
+display:grid;
+
+grid-template-columns:220px 1fr;
+
+padding:16px 0;
+
+border-bottom:1px solid #ece3d6;
+}
+
+.row:last-child{
+border-bottom:none;
+}
+
+.label{
+font-size:18px;
+
+color:#3b3128;
+}
+
+.value{
+font-size:20px;
+font-weight:600;
+
+word-break:break-word;
+}
+
+.gold{
+color:#c5922d;
+}
+
+/* VALID */
+
+.valid-box{
+display:flex;
+align-items:center;
+
+gap:20px;
+
+background:#eef8e8;
+
+border:1px solid #cfe1c5;
+
+border-radius:18px;
+
+padding:18px 24px;
+
+margin-bottom:22px;
+}
+
+.valid-box i{
+font-size:60px;
+
+color:#2fc238;
+}
+
+.valid-title{
+font-size:40px;
+font-weight:700;
+
+color:#1f8a2d;
+
+line-height:1;
+}
+
+.valid-desc{
+font-size:17px;
+
+margin-top:6px;
+}
+
+/* SIGN */
+
+.sign{
+text-align:center;
+
+margin-top:8px;
+}
+
+.sign-text{
+font-size:18px;
+
+margin-bottom:8px;
+}
+
+.sign-name{
+font-family:'Cinzel',serif;
+
+font-size:38px;
+font-weight:700;
+}
+
+.sign-role{
+font-size:18px;
+}
+
+/* BOTTOM ORNAMENT */
+
+.bottom-ornament{
+display:flex;
+justify-content:center;
+align-items:center;
+
+gap:12px;
+
+margin-top:16px;
+}
+
+.bottom-ornament .line{
+width:120px;
+height:2px;
+
+background:#d2b06b;
+}
+
+.bottom-ornament i{
+font-size:24px;
+
+color:#d2b06b;
+}
+
+/* NOTICE */
+
+.notice{
+margin-top:14px;
+
+background:rgba(255,250,245,.92);
+
+border:1px solid #e6d7bf;
+
+border-radius:18px;
+
+padding:18px 24px;
+
+display:flex;
+align-items:flex-start;
+
+gap:16px;
+}
+
+.notice i{
+font-size:28px;
+
+color:#c9982f;
+}
+
+.notice-text{
+font-size:17px;
+
+line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:16px;
+
+text-align:center;
+
+font-size:14px;
+
+line-height:1.8;
+
+color:#6d5c4d;
+}
+
+footer strong{
+font-size:18px;
+}
+
+footer a{
+color:#b88620;
+text-decoration:none;
+font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+body{
+height:auto;
+overflow:auto;
+}
+
+.container{
+height:auto;
+
+padding:18px 14px 24px;
+
+margin:12px auto;
+}
+
+.logo{
+width:90px;
+}
+
+h1{
+font-size:38px;
+line-height:1.15;
+}
+
+.subtitle{
+font-size:12px;
+letter-spacing:3px;
+}
+
+.ornament .line{
+width:70px;
+}
+
+.search-wrap{
+flex-direction:column;
+}
+
+.search-box{
+height:56px;
+}
+
+button{
+width:100%;
+height:56px;
+font-size:16px;
+}
+
+.result{
+padding:18px 14px;
+}
+
+.shield i{
+width:92px;
+height:92px;
+line-height:92px;
+
+font-size:52px;
+}
+
+.verified-title{
+font-size:30px;
+line-height:1.2;
+}
+
+.desc{
+font-size:15px;
+}
+
+.school{
+font-size:22px;
+line-height:1.3;
+}
+
+.city{
+font-size:15px;
+}
+
+.info-box{
+padding:8px 14px;
+}
+
+.row{
+grid-template-columns:1fr;
+
+gap:8px;
+
+padding:14px 0;
+}
+
+.label{
+font-size:15px;
+}
+
+.value{
+font-size:16px;
+}
+
+.valid-box{
+padding:16px;
+gap:14px;
+}
+
+.valid-box i{
+font-size:44px;
+}
+
+.valid-title{
+font-size:28px;
+}
+
+.valid-desc{
+font-size:14px;
+}
+
+.sign-name{
+font-size:28px;
+}
+
+.sign-role{
+font-size:15px;
+}
+
+.notice{
+padding:16px;
+}
+
+.notice-text{
+font-size:14px;
+}
+
+footer{
+font-size:12px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+<img class="logo" src="https://i.imgur.com/0R6mM3v.png">
 
 <h1>VERIFIKASI PIAGAM ONLINE</h1>
 
-<p class="subtitle">
+<div class="subtitle">
 ELEGAN • RESMI • MUDAH DIPERCAYA
-</p>
-
-<div class="divider">
-<div class="divider-center"></div>
 </div>
+
+<div class="ornament">
+<div class="line"></div>
+<div class="circle"></div>
+<div class="line"></div>
+</div>
+
+<div class="search-wrap">
 
 <div class="search-box">
-
-<div class="search-icon">
 <i class="fa-regular fa-file-lines"></i>
+
+<input
+type="text"
+id="nomor"
+placeholder="Masukkan nomor piagam..."
+>
 </div>
 
-<input type="text" placeholder="Masukkan nomor piagam...">
-
-<button>
-<i class="fa-solid fa-magnifying-glass"></i>
+<button onclick="cekPiagam()">
+<i class="fa fa-search"></i>
 VERIFIKASI
 </button>
 
 </div>
 
-<div class="card">
+<div id="hasil" class="result">
 
 <div class="shield">
-<i class="fa-solid fa-shield-halved"></i>
+<i class="fa-solid fa-shield-check"></i>
 </div>
 
-<h2>PIAGAM TERVERIFIKASI</h2>
+<div class="verified-title">
+PIAGAM TERVERIFIKASI
+</div>
 
-<p class="desc">
+<div class="desc">
 Dokumen ini asli dan diterbitkan oleh:
-</p>
+</div>
 
-<h3>UPT SD NEGERI TUGUREJO 02</h3>
+<div class="school">
+UPT SD NEGERI TUGUREJO 02
+</div>
 
-<p class="small">
+<div class="city">
 Kabupaten Blitar
-</p>
+</div>
 
-<table>
+<div class="info-box">
 
-<tr>
-<td>Nama</td>
-<td class="highlight">
+<div class="row">
+<div class="label">Nama</div>
+<div class="value gold">
 Athallah Eza Davian Hardianto
-</td>
-</tr>
+</div>
+</div>
 
-<tr>
-<td>Nomor Piagam</td>
-<td>
+<div class="row">
+<div class="label">Nomor Piagam</div>
+<div class="value">
 B/420.02.02.01.04/87/409.101.558/2025
-</td>
-</tr>
+</div>
+</div>
 
-<tr>
-<td>Prestasi</td>
-<td>
+<div class="row">
+<div class="label">Prestasi</div>
+<div class="value">
 Ranking 1 Kelas VI Semester 1
-</td>
-</tr>
+</div>
+</div>
 
-<tr>
-<td>Tahun Pelajaran</td>
-<td>
+<div class="row">
+<div class="label">Rata-rata Nilai</div>
+<div class="value">
+88.04
+</div>
+</div>
+
+<div class="row">
+<div class="label">Tahun Pelajaran</div>
+<div class="value">
 2025/2026
-</td>
-</tr>
+</div>
+</div>
 
-<tr>
-<td>Tanggal Terbit</td>
-<td>
+<div class="row">
+<div class="label">Tanggal Terbit</div>
+<div class="value">
 2 Juni 2025
-</td>
-</tr>
+</div>
+</div>
 
-</table>
+</div>
 
 <div class="valid-box">
 
-<div class="check">
-<i class="fa-solid fa-check"></i>
-</div>
+<i class="fa-solid fa-circle-check"></i>
 
 <div>
 
@@ -123,65 +767,72 @@ Piagam ini sah dan dapat dipercaya.
 
 </div>
 
-<p class="signed">
+<div class="sign">
+
+<div class="sign-text">
 Ditandatangani secara resmi oleh:
-</p>
+</div>
 
-<h4>Masrur, S.Ag.</h4>
+<div class="sign-name">
+Masrur, S.Ag.
+</div>
 
-<p class="jabatan">
+<div class="sign-role">
 Kepala UPT SD Negeri Tugurejo 02
-</p>
-
-<div class="bottom-divider">
-<div class="small-divider"></div>
 </div>
 
 </div>
 
-<div class="info-box">
+<div class="bottom-ornament">
+<div class="line"></div>
+<i class="fa-solid fa-gem"></i>
+<div class="line"></div>
+</div>
 
-<div class="info-icon">
+</div>
+
+<div class="notice">
+
 <i class="fa-solid fa-circle-info"></i>
-</div>
 
-<div>
-Pastikan nomor piagam sesuai dengan yang tertera pada piagam.
-<br>
+<div class="notice-text">
+Pastikan nomor piagam sesuai dengan yang tertera pada piagam.<br>
 Jika terdapat informasi yang tidak sesuai, hubungi pihak sekolah.
 </div>
 
 </div>
 
-<div class="footer">
+<footer>
 
-<div class="footer-divider"></div>
+Sistem verifikasi piagam digital dikembangkan untuk<br>
 
-<p>
-Sistem verifikasi piagam digital dikembangkan untuk
-</p>
+<strong>UPT SD Negeri Tugurejo 02</strong><br>
 
-<strong>
-UPT SD Negeri Tugurejo 02
-</strong>
+oleh Himawan Reza Annas, S.S.<br><br>
 
-<p class="creator">
-oleh Himawan Reza Annas, S.S.
-</p>
-
-<p class="repo">
 <i class="fa-brands fa-github"></i>
 Repository:
-github.com/himawanrezaannas/piagam-verifikasi
-</p>
+<a href="#">
+github.com/uptsdntugurejo02/piagam-verifikasi
+</a>
 
-<p class="copyright">
+<br><br>
+
 © 2025 All rights reserved.
-</p>
+
+</footer>
 
 </div>
 
-</div>
+<script>
+
+function cekPiagam(){
+
+alert("Sistem verifikasi berhasil dijalankan.");
+
+}
+
+</script>
 
 </body>
 </html>
