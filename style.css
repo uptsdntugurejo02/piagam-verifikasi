@@ -7,7 +7,7 @@ box-sizing:border-box;
 body{
 font-family:'Inter',sans-serif;
 background:#f3f4f6;
-color:#1f2937;
+color:#111827;
 overflow-x:hidden;
 }
 
@@ -33,75 +33,99 @@ border-bottom:1px solid #ececec;
 background:white;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 
-.top-left{
+.back-btn{
 width:40px;
 }
 
-.top-left i{
-font-size:22px;
+.back-btn i{
+font-size:24px;
 color:#555;
 cursor:pointer;
 }
 
 .top-title{
-font-size:24px;
+font-size:22px;
 font-weight:700;
 }
 
 /* CONTENT */
 
 .content{
-padding:30px 22px 40px;
+padding:34px 24px 42px;
 }
 
-/* LOGO */
+/* SCHOOL HEADER */
 
-.logo{
-width:100px;
-display:block;
-margin:auto;
-margin-bottom:24px;
+.school-header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+margin-bottom:38px;
 }
 
-/* HERO */
+.school-logo{
+width:82px;
+height:auto;
+flex-shrink:0;
+}
+
+.school-text{
+text-align:left;
+}
+
+.school-name{
+font-size:26px;
+font-weight:800;
+line-height:1.2;
+color:#111827;
+}
+
+.school-region{
+font-size:16px;
+color:#6b7280;
+margin-top:4px;
+}
+
+/* VERIFIED ICON */
 
 .hero-icon{
-width:120px;
-height:120px;
+width:140px;
+height:140px;
 border-radius:50%;
-background:#e8f7ed;
+background:#eaf7ee;
 display:flex;
 justify-content:center;
 align-items:center;
 margin:auto;
-margin-bottom:22px;
+margin-bottom:24px;
 }
 
 .hero-icon i{
-font-size:70px;
+font-size:76px;
 color:#16a34a;
 }
 
 /* TITLE */
 
 h1{
-font-size:44px;
+font-size:52px;
 font-weight:800;
-line-height:1.15;
+line-height:1.05;
 text-align:center;
-margin-bottom:14px;
-color:#111827;
+margin-bottom:18px;
+color:#0f172a;
 }
 
 .subtitle{
 text-align:center;
-font-size:18px;
+font-size:19px;
 color:#6b7280;
 line-height:1.7;
-margin-bottom:34px;
+margin-bottom:38px;
 }
 
 /* PDF CARD */
@@ -110,22 +134,22 @@ margin-bottom:34px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:22px;
 border:1px solid #e5e7eb;
-border-radius:22px;
-margin-bottom:34px;
+border-radius:24px;
 background:white;
+margin-bottom:36px;
 }
 
 .pdf-left{
 display:flex;
-gap:16px;
+gap:18px;
 align-items:center;
 }
 
 .pdf-icon{
-width:58px;
-height:58px;
+width:62px;
+height:62px;
 border-radius:18px;
 background:#f3f4f6;
 display:flex;
@@ -134,15 +158,15 @@ align-items:center;
 }
 
 .pdf-icon i{
-font-size:28px;
+font-size:32px;
 color:#ef4444;
 }
 
 .pdf-name{
-font-size:18px;
+font-size:20px;
 font-weight:700;
+line-height:1.4;
 margin-bottom:6px;
-line-height:1.5;
 }
 
 .pdf-pages{
@@ -151,10 +175,13 @@ color:#6b7280;
 }
 
 .view-btn{
-text-decoration:none;
+padding:14px 28px;
+border-radius:16px;
+background:#2563eb;
+color:white;
 font-size:18px;
 font-weight:700;
-color:#2563eb;
+text-decoration:none;
 }
 
 /* SECTION */
@@ -162,12 +189,12 @@ color:#2563eb;
 .section-title{
 font-size:14px;
 font-weight:700;
-color:#8b8b8b;
 letter-spacing:1px;
-margin-bottom:18px;
+color:#8b8b8b;
+margin-bottom:20px;
 }
 
-/* SIGNATURE CARD */
+/* SIGNATURE */
 
 .signature-card{
 display:flex;
@@ -175,37 +202,35 @@ justify-content:space-between;
 align-items:center;
 padding-bottom:24px;
 border-bottom:1px solid #ececec;
-margin-bottom:28px;
+margin-bottom:30px;
 gap:16px;
 }
 
 .signature-left{
 display:flex;
-gap:14px;
+gap:16px;
 align-items:center;
 }
 
 .signature-avatar{
-width:54px;
-height:54px;
+width:56px;
+height:56px;
 border-radius:50%;
 background:#f3f4f6;
 display:flex;
 justify-content:center;
 align-items:center;
-flex-shrink:0;
 }
 
 .signature-avatar i{
-font-size:22px;
+font-size:24px;
 color:#666;
 }
 
 .signature-name{
-font-size:21px;
+font-size:22px;
 font-weight:700;
 margin-bottom:4px;
-line-height:1.4;
 }
 
 .signature-sub{
@@ -216,31 +241,30 @@ color:#6b7280;
 .trusted-badge{
 background:#dcfce7;
 color:#15803d;
-padding:10px 16px;
+padding:12px 18px;
 border-radius:14px;
 font-size:15px;
 font-weight:700;
 display:flex;
 align-items:center;
 gap:8px;
-white-space:nowrap;
 }
 
 /* DETAIL */
 
 .detail-card{
 background:#fafafa;
+padding:26px;
 border-radius:24px;
-padding:24px;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .detail-row{
+padding:16px 0;
+border-bottom:1px solid #ececec;
 display:flex;
 flex-direction:column;
 gap:8px;
-padding:16px 0;
-border-bottom:1px solid #ececec;
 }
 
 .detail-row:last-child{
@@ -263,19 +287,19 @@ word-break:break-word;
 
 .info-box{
 background:#f3f4f6;
-padding:20px;
+padding:22px;
 border-radius:18px;
 font-size:15px;
 line-height:1.8;
 color:#555;
-margin-bottom:30px;
+margin-bottom:32px;
 }
 
 /* BUTTON */
 
 .verify-btn{
 width:100%;
-height:62px;
+height:64px;
 border:none;
 border-radius:20px;
 background:#16a34a;
@@ -292,8 +316,8 @@ cursor:pointer;
 /* FOOTER */
 
 .footer{
+margin-top:34px;
 text-align:center;
-margin-top:30px;
 font-size:14px;
 line-height:1.8;
 color:#777;
@@ -304,17 +328,14 @@ color:#777;
 @media(min-width:900px){
 
 body{
-background:
-linear-gradient(
-90deg,
-#eef0f3,
-#f8fafc,
-#eef0f3
-);
+display:flex;
+justify-content:center;
+padding:40px 0;
+background:#eef2f7;
 }
 
 .app{
-margin:40px auto;
+max-width:680px;
 border-radius:28px;
 overflow:hidden;
 min-height:auto;
@@ -326,10 +347,6 @@ min-height:auto;
 
 @media(max-width:480px){
 
-.app{
-max-width:100%;
-}
-
 .topbar{
 height:64px;
 padding:0 16px;
@@ -340,34 +357,45 @@ font-size:20px;
 }
 
 .content{
-padding:24px 16px 36px;
+padding:28px 16px 36px;
 }
 
-.logo{
-width:84px;
-margin-bottom:20px;
+.school-header{
+gap:12px;
+margin-bottom:28px;
+}
+
+.school-logo{
+width:64px;
+}
+
+.school-name{
+font-size:20px;
+}
+
+.school-region{
+font-size:14px;
 }
 
 .hero-icon{
-width:96px;
-height:96px;
-margin-bottom:18px;
+width:110px;
+height:110px;
+margin-bottom:20px;
 }
 
 .hero-icon i{
-font-size:54px;
+font-size:60px;
 }
 
 h1{
-font-size:34px;
-line-height:1.15;
-margin-bottom:12px;
+font-size:36px;
+line-height:1.1;
+margin-bottom:14px;
 }
 
 .subtitle{
 font-size:16px;
-line-height:1.7;
-margin-bottom:26px;
+margin-bottom:28px;
 }
 
 .pdf-card{
@@ -375,74 +403,50 @@ flex-direction:column;
 align-items:flex-start;
 gap:18px;
 padding:18px;
-margin-bottom:28px;
+margin-bottom:30px;
 }
 
 .pdf-left{
 width:100%;
 }
 
-.view-btn{
-width:100%;
-height:48px;
-border-radius:14px;
-background:#2563eb;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
+.pdf-name{
+font-size:18px;
 }
 
-.section-title{
-font-size:12px;
-margin-bottom:14px;
+.view-btn{
+width:100%;
+text-align:center;
 }
 
 .signature-card{
 flex-direction:column;
 align-items:flex-start;
 gap:18px;
-padding-bottom:22px;
-margin-bottom:24px;
-}
-
-.trusted-badge{
-align-self:flex-start;
 }
 
 .signature-name{
 font-size:18px;
 }
 
-.detail-card{
-padding:20px 18px;
-margin-bottom:24px;
+.trusted-badge{
+align-self:flex-start;
 }
 
-.detail-row{
-padding:14px 0;
+.detail-card{
+padding:20px 18px;
 }
 
 .detail-row strong{
 font-size:16px;
-line-height:1.6;
-}
-
-.info-box{
-padding:18px;
-font-size:14px;
-line-height:1.7;
-margin-bottom:24px;
 }
 
 .verify-btn{
 height:58px;
 font-size:18px;
-border-radius:16px;
 }
 
 .footer{
-margin-top:24px;
 font-size:13px;
 line-height:1.7;
 }
