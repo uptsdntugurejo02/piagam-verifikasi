@@ -57,39 +57,6 @@ font-weight:700;
 padding:34px 24px 42px;
 }
 
-/* SCHOOL HEADER */
-
-.school-header{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:18px;
-margin-bottom:38px;
-}
-
-.school-logo{
-width:82px;
-height:auto;
-flex-shrink:0;
-}
-
-.school-text{
-text-align:left;
-}
-
-.school-name{
-font-size:26px;
-font-weight:800;
-line-height:1.2;
-color:#111827;
-}
-
-.school-region{
-font-size:16px;
-color:#6b7280;
-margin-top:4px;
-}
-
 /* VERIFIED ICON */
 
 .hero-icon{
@@ -212,19 +179,11 @@ gap:16px;
 align-items:center;
 }
 
-.signature-avatar{
-width:56px;
-height:56px;
-border-radius:50%;
-background:#f3f4f6;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.signature-avatar i{
-font-size:24px;
-color:#666;
+.signature-logo{
+width:58px;
+height:58px;
+object-fit:contain;
+flex-shrink:0;
 }
 
 .signature-name{
@@ -360,23 +319,6 @@ font-size:20px;
 padding:28px 16px 36px;
 }
 
-.school-header{
-gap:12px;
-margin-bottom:28px;
-}
-
-.school-logo{
-width:64px;
-}
-
-.school-name{
-font-size:20px;
-}
-
-.school-region{
-font-size:14px;
-}
-
 .hero-icon{
 width:110px;
 height:110px;
@@ -427,6 +369,10 @@ gap:18px;
 
 .signature-name{
 font-size:18px;
+}
+
+.signature-logo{
+width:52px;
 }
 
 .trusted-badge{
