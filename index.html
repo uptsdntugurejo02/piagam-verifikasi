@@ -66,17 +66,17 @@ Sertifikat resmi dengan validasi digital sekolah
 <div class="pdf-left">
 
 <div class="pdf-icon">
-<i class="fa-regular fa-file-pdf"></i>
+<i class="fa-regular fa-file-image"></i>
 </div>
 
 <div>
 
 <div class="pdf-name" id="pdfName">
-PIAGAM_RANKING_1_2025.pdf
+Piagam_Rangking_1_SMT_I_2025.png
 </div>
 
 <div class="pdf-pages">
-1 halaman
+Dokumen Sertifikat Digital
 </div>
 
 </div>
@@ -179,6 +179,13 @@ Ranking 1 Kelas VI Semester 1
 </div>
 
 <div class="detail-row">
+<span>Penanda Tangan</span>
+<strong id="penandatangan">
+Masrur, S.Ag.
+</strong>
+</div>
+
+<div class="detail-row">
 <span>Kode Sertifikat</span>
 <strong id="kode">
 CERT-2025-R1-VI-00087
@@ -239,7 +246,9 @@ tahun: "2025/2026",
 
 tanggal: "2 Juni 2025",
 
-pdf: "pdf/athallah.pdf"
+penandatangan: "Masrur, S.Ag.",
+
+pdf: "pdf/Piagam_Rangking_1_SMT_I_2025.png"
 
 },
 
@@ -257,7 +266,9 @@ tahun: "2025/2026",
 
 tanggal: "2 Juni 2025",
 
-pdf: "pdf/juna.pdf"
+penandatangan: "Masrur, S.Ag.",
+
+pdf: "pdf/Piagam_Rangking_2_SMT_I_2025.png"
 
 },
 
@@ -275,7 +286,9 @@ tahun: "2025/2026",
 
 tanggal: "2 Juni 2025",
 
-pdf: "pdf/arjuna.pdf"
+penandatangan: "Masrur, S.Ag.",
+
+pdf: "pdf/Piagam_Rangking_3_SMT_I_2025.png"
 
 }
 
@@ -301,9 +314,14 @@ document.getElementById("tahun").innerText = data.tahun;
 
 document.getElementById("tanggal").innerText = data.tanggal;
 
+document.getElementById("penandatangan").innerText = data.penandatangan;
+
 document.getElementById("kode").innerText = cert;
 
 document.getElementById("pdfButton").href = data.pdf;
+
+document.getElementById("pdfName").innerText =
+data.pdf.replace("pdf/","");
 
 }
 
