@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Verifikasi Piagam Online</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
 
 *{
 margin:0;
@@ -25,158 +10,136 @@ body{
 font-family:'Inter',sans-serif;
 
 background:
-linear-gradient(rgba(248,244,238,.95),rgba(248,244,238,.95)),
+linear-gradient(rgba(248,245,239,.95),rgba(248,245,239,.95)),
 url('https://www.transparenttextures.com/patterns/arabesque.png');
+
+background-size:cover;
+background-attachment:fixed;
 
 min-height:100vh;
 
-color:#2b2118;
+color:#2b2119;
 
 overflow-x:hidden;
 }
 
-/* ===== CONTAINER ===== */
+/* CONTAINER */
 
 .container{
 width:94%;
-max-width:1180px;
+max-width:1280px;
 
-margin:18px auto;
+margin:auto;
 
-background:rgba(255,255,255,.72);
+padding:18px 24px 14px;
 
-backdrop-filter:blur(16px);
+min-height:100vh;
 
-border-radius:34px;
-
-padding:24px 28px;
-
-box-shadow:
-0 16px 40px rgba(0,0,0,.08);
-
-position:relative;
-overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-/* ===== BATIK ORNAMENT ===== */
-
-.container::before,
-.container::after{
-content:"";
-
-position:absolute;
-
-width:240px;
-height:240px;
-
-opacity:.08;
-
-background-image:
-radial-gradient(#d5b06a 2px, transparent 2px);
-
-background-size:20px 20px;
-
-pointer-events:none;
-}
-
-.container::before{
-top:-40px;
-left:-40px;
-}
-
-.container::after{
-bottom:-40px;
-right:-40px;
-}
-
-/* ===== LOGO ===== */
+/* LOGO */
 
 .logo{
-width:150px;
+width:120px;
+height:auto;
 
 display:block;
 
-margin:0 auto 12px;
+margin:0 auto 10px;
 
 object-fit:contain;
 
 filter:
-drop-shadow(0 6px 18px rgba(0,0,0,.12));
+drop-shadow(0 6px 16px rgba(0,0,0,.18));
+
+transition:.3s;
 }
 
-/* ===== TITLE ===== */
+.logo:hover{
+transform:scale(1.03);
+}
+
+/* TITLE */
 
 h1{
 font-family:'Cinzel',serif;
 
-font-size:56px;
+font-size:58px;
 font-weight:700;
 
 text-align:center;
 
 line-height:1.08;
 
-color:#2b1d15;
+letter-spacing:1px;
 
-margin-bottom:8px;
+color:#241913;
+
+margin-bottom:10px;
 }
 
 .subtitle{
 text-align:center;
 
-font-size:15px;
+font-size:16px;
 font-weight:600;
 
 letter-spacing:5px;
 
-color:#c69735;
+color:#c79c43;
+
+margin-bottom:18px;
+}
+
+/* ORNAMENT */
+
+.ornament{
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:14px;
 
 margin-bottom:22px;
 }
 
-/* ===== ORNAMENT ===== */
-
-.ornament{
-display:flex;
-justify-content:center;
-align-items:center;
-
-gap:14px;
-
-margin-bottom:26px;
-}
-
 .ornament .line{
-width:120px;
+width:140px;
 height:2px;
 
 background:
 linear-gradient(
 90deg,
 transparent,
-#d4ae60,
+#d7b46c,
 transparent
 );
 }
 
 .ornament .circle{
-width:22px;
-height:22px;
+width:24px;
+height:24px;
 
 border-radius:50%;
 
-border:3px solid #d4ae60;
+border:3px solid #d7b46c;
 
 background:white;
+
+box-shadow:
+0 0 0 6px rgba(215,180,108,.12);
 }
 
-/* ===== SEARCH ===== */
+/* SEARCH */
 
 .search-wrap{
 display:flex;
 gap:14px;
 
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .search-box{
@@ -185,7 +148,9 @@ flex:1;
 display:flex;
 align-items:center;
 
-background:white;
+background:rgba(255,255,255,.9);
+
+border:1px solid #e8ddca;
 
 border-radius:22px;
 
@@ -193,50 +158,51 @@ padding:0 22px;
 
 height:66px;
 
-border:1px solid #e7dccb;
-
 box-shadow:
-0 6px 18px rgba(0,0,0,.04);
+0 8px 24px rgba(0,0,0,.05);
 }
 
 .search-box i{
 font-size:24px;
 
-color:#c79531;
+color:#c69731;
 
 margin-right:16px;
 }
 
 .search-box input{
-width:100%;
-
 border:none;
 outline:none;
+
+width:100%;
 
 background:transparent;
 
 font-family:'Inter',sans-serif;
 
-font-size:18px;
+font-size:19px;
 font-weight:500;
+
+color:#2c241d;
 }
 
 .search-box input::placeholder{
-color:#ab9f90;
+color:#b6a899;
 }
 
 button{
 width:250px;
 
 border:none;
+outline:none;
 
 border-radius:22px;
 
 background:
 linear-gradient(
 145deg,
-#d6a342,
-#ba8520
+#d7a646,
+#b9831e
 );
 
 color:white;
@@ -249,32 +215,38 @@ cursor:pointer;
 transition:.25s;
 
 box-shadow:
-0 8px 24px rgba(183,130,26,.25);
+0 8px 24px rgba(183,130,28,.28);
 }
 
 button:hover{
 transform:translateY(-2px);
+
+box-shadow:
+0 12px 28px rgba(183,130,28,.38);
 }
 
-/* ===== CARD ===== */
+/* RESULT CARD */
 
 .result{
+position:relative;
+
 background:
 linear-gradient(
 180deg,
 rgba(255,255,255,.96),
-rgba(255,252,247,.96)
+rgba(255,251,246,.96)
 );
 
-border:1px solid #dfe8d8;
+border-radius:32px;
 
-border-radius:30px;
+border:1px solid #dfe7d8;
 
-padding:28px 34px;
-
-position:relative;
+padding:26px 34px;
 
 overflow:hidden;
+
+box-shadow:
+0 12px 36px rgba(0,0,0,.06);
 }
 
 .result::before{
@@ -284,51 +256,72 @@ position:absolute;
 inset:0;
 
 background:
-url('https://www.transparenttextures.com/patterns/white-diamond.png');
+url('https://www.transparenttextures.com/patterns/white-diamond-dark.png');
 
-opacity:.05;
+opacity:.04;
 
 pointer-events:none;
 }
 
-/* ===== SHIELD ===== */
+.result::after{
+content:"";
+
+position:absolute;
+
+top:0;
+right:0;
+
+width:220px;
+height:220px;
+
+background:
+radial-gradient(circle at top right,
+rgba(214,174,92,.16),
+transparent 70%);
+
+pointer-events:none;
+}
+
+/* SHIELD */
 
 .shield{
 text-align:center;
 
-margin-bottom:14px;
+margin-bottom:12px;
 }
 
 .shield i{
-font-size:70px;
+font-size:74px;
 
-color:#d2a03f;
+color:#d4a03e;
 
 background:
-radial-gradient(circle,#fff6dc,#f2e1aa);
+radial-gradient(circle,#fff6dc,#f5e3a9);
 
-width:126px;
-height:126px;
+width:130px;
+height:130px;
 
-line-height:126px;
+line-height:130px;
 
 border-radius:50%;
 
 box-shadow:
-0 10px 24px rgba(213,163,59,.2);
+0 12px 30px rgba(213,163,59,.22);
 }
 
-/* ===== VERIFIED ===== */
+/* VERIFIED TITLE */
 
 .verified-title{
 font-family:'Cinzel',serif;
 
-font-size:44px;
+font-size:46px;
 font-weight:700;
 
 text-align:center;
 
-color:#2d5d31;
+line-height:1.1;
+
+color:#2f6133;
 
 margin-bottom:10px;
 }
@@ -342,7 +335,7 @@ line-height:1.6;
 
 margin-bottom:18px;
 
-color:#51453b;
+color:#4e4136;
 }
 
 .school{
@@ -353,7 +346,9 @@ font-weight:700;
 
 text-align:center;
 
-margin-bottom:4px;
+line-height:1.2;
+
+margin-bottom:6px;
 }
 
 .city{
@@ -361,34 +356,36 @@ text-align:center;
 
 font-size:18px;
 
-margin-bottom:24px;
+margin-bottom:22px;
 }
 
-/* ===== INFO BOX ===== */
+/* TABLE */
 
 .info-box{
 background:
-rgba(255,255,255,.75);
+rgba(255,255,255,.76);
 
-border:1px solid #ead9bb;
+border:1px solid #ead7b6;
 
 border-radius:22px;
 
-padding:12px 24px;
+padding:12px 26px;
 
-margin-bottom:22px;
+margin-bottom:20px;
+
+backdrop-filter:blur(4px);
 }
 
 .row{
 display:grid;
 
-grid-template-columns:220px 1fr;
-
-gap:20px;
+grid-template-columns:240px 1fr;
 
 padding:16px 0;
 
-border-bottom:1px solid #eee4d7;
+border-bottom:1px solid #eee4d6;
+
+gap:20px;
 }
 
 .row:last-child{
@@ -396,26 +393,26 @@ border-bottom:none;
 }
 
 .label{
-font-size:17px;
-font-weight:600;
+font-size:18px;
+font-weight:500;
 
-color:#40342b;
+color:#3d3128;
 }
 
 .value{
-font-size:19px;
+font-size:20px;
 font-weight:600;
 
-word-break:break-word;
-
 line-height:1.5;
+
+word-break:break-word;
 }
 
 .gold{
-color:#c7922f;
+color:#c7932e;
 }
 
-/* ===== VALID ===== */
+/* VALID BOX */
 
 .valid-box{
 display:flex;
@@ -426,23 +423,23 @@ gap:22px;
 background:
 linear-gradient(
 145deg,
-#eef8e7,
-#e7f5e5
+#edf8e7,
+#e7f6e4
 );
 
-border:1px solid #cfe2c7;
+border:1px solid #cfe2c8;
 
-border-radius:22px;
+border-radius:20px;
 
-padding:18px 24px;
+padding:20px 24px;
 
 margin-bottom:22px;
 }
 
 .valid-box i{
-font-size:62px;
+font-size:64px;
 
-color:#2ec236;
+color:#2ec237;
 }
 
 .valid-title{
@@ -451,25 +448,27 @@ font-weight:700;
 
 line-height:1;
 
-color:#20882b;
+color:#21872d;
 }
 
 .valid-desc{
-font-size:16px;
+font-size:17px;
 
 margin-top:6px;
 
-color:#355139;
+color:#2c472f;
 }
 
-/* ===== SIGN ===== */
+/* SIGN */
 
 .sign{
 text-align:center;
+
+margin-top:6px;
 }
 
 .sign-text{
-font-size:17px;
+font-size:18px;
 
 margin-bottom:8px;
 }
@@ -484,15 +483,15 @@ margin-bottom:4px;
 }
 
 .sign-role{
-font-size:17px;
+font-size:18px;
 }
 
-/* ===== ORNAMENT ===== */
+/* BOTTOM ORNAMENT */
 
 .bottom-ornament{
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 
 gap:14px;
 
@@ -500,28 +499,28 @@ margin-top:18px;
 }
 
 .bottom-ornament .line{
-width:120px;
+width:140px;
 height:2px;
 
 background:
 linear-gradient(
 90deg,
 transparent,
-#d4ae60,
+#d3b06a,
 transparent
 );
 }
 
 .bottom-ornament i{
-font-size:22px;
+font-size:24px;
 
-color:#d4ae60;
+color:#d3b06a;
 }
 
-/* ===== NOTICE ===== */
+/* NOTICE */
 
 .notice{
-margin-top:18px;
+margin-top:16px;
 
 display:flex;
 align-items:flex-start;
@@ -529,190 +528,249 @@ align-items:flex-start;
 gap:16px;
 
 background:
-rgba(255,250,244,.9);
+rgba(255,250,243,.9);
 
-border:1px solid #e7d8be;
+border:1px solid #e8d8bc;
 
-border-radius:22px;
+border-radius:20px;
 
 padding:18px 22px;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.03);
 }
 
 .notice i{
-font-size:28px;
+font-size:30px;
 
-color:#c8962f;
+color:#ca972c;
 }
 
 .notice-text{
-font-size:16px;
+font-size:17px;
 
 line-height:1.7;
 
-color:#4c4037;
+color:#4a3e35;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer{
-margin-top:18px;
+margin-top:16px;
 
 text-align:center;
 
-font-size:13px;
+font-size:14px;
 
 line-height:1.9;
 
-color:#6d5b4c;
+color:#6b5b4e;
 }
 
 footer strong{
-font-size:18px;
+font-size:20px;
 
-color:#2d241d;
+color:#2c241d;
 }
 
 footer a{
-color:#bb8620;
+color:#b9861f;
 
 text-decoration:none;
 
 font-weight:600;
 }
 
-/* ===== DESKTOP FIT ===== */
-
-@media(min-width:1200px){
-
-.container{
-transform:scale(.90);
-transform-origin:top center;
+footer i{
+margin-right:6px;
 }
 
-}
-
-/* ===== MOBILE ===== */
+/* ================= MOBILE RESPONSIVE ================= */
 
 @media(max-width:768px){
 
+body{
+overflow-x:hidden;
+}
+
 .container{
-width:94%;
+width:100%;
+max-width:100%;
 
-padding:18px 14px;
+padding:14px 12px 22px;
 
-margin:14px auto;
-
-border-radius:26px;
+min-height:auto;
 }
 
 .logo{
-width:92px;
+width:72px;
+
+margin-bottom:10px;
 }
 
 h1{
-font-size:34px;
+font-size:18vw;
 
-line-height:1.14;
+line-height:0.95;
+
+letter-spacing:-1px;
+
+margin-bottom:8px;
 }
 
 .subtitle{
 font-size:11px;
 
 letter-spacing:2px;
+
+line-height:1.6;
+
+margin-bottom:14px;
+}
+
+.ornament{
+gap:10px;
+
+margin-bottom:18px;
 }
 
 .ornament .line{
 width:60px;
 }
 
+.ornament .circle{
+width:18px;
+height:18px;
+
+border-width:2px;
+}
+
 .search-wrap{
 flex-direction:column;
+
+gap:12px;
+
+margin-bottom:18px;
 }
 
 .search-box{
-height:56px;
+height:52px;
 
-padding:0 16px;
+border-radius:16px;
+
+padding:0 14px;
 }
 
 .search-box i{
-font-size:20px;
+font-size:18px;
 
 margin-right:10px;
 }
 
 .search-box input{
-font-size:15px;
+font-size:16px;
 }
 
 button{
 width:100%;
-height:56px;
+
+height:54px;
+
+border-radius:18px;
 
 font-size:16px;
 }
 
 .result{
-padding:20px 14px;
+padding:16px 14px;
+
+border-radius:24px;
+}
+
+.shield{
+margin-bottom:8px;
 }
 
 .shield i{
-width:96px;
-height:96px;
+width:82px;
+height:82px;
 
-line-height:96px;
+line-height:82px;
 
-font-size:52px;
+font-size:42px;
 }
 
 .verified-title{
-font-size:30px;
+font-size:13vw;
 
-line-height:1.2;
+line-height:1;
+
+margin-bottom:10px;
 }
 
 .desc{
-font-size:15px;
+font-size:14px;
+
+line-height:1.5;
+
+margin-bottom:12px;
 }
 
 .school{
-font-size:22px;
+font-size:8vw;
 
-line-height:1.3;
+line-height:1.2;
+
+margin-bottom:2px;
 }
 
 .city{
-font-size:15px;
+font-size:14px;
+
+margin-bottom:16px;
 }
 
 .info-box{
-padding:8px 14px;
+padding:6px 12px;
+
+border-radius:18px;
+
+margin-bottom:16px;
 }
 
 .row{
 grid-template-columns:1fr;
 
-gap:8px;
+gap:6px;
 
-padding:14px 0;
+padding:12px 0;
 }
 
 .label{
-font-size:15px;
+font-size:14px;
+
+font-weight:600;
 }
 
 .value{
-font-size:16px;
+font-size:15px;
+
+line-height:1.5;
 }
 
 .valid-box{
-padding:16px;
+padding:14px;
 
-gap:14px;
+gap:12px;
+
+border-radius:16px;
+
+margin-bottom:16px;
 }
 
 .valid-box i{
-font-size:44px;
+font-size:40px;
 }
 
 .valid-title{
@@ -720,214 +778,77 @@ font-size:28px;
 }
 
 .valid-desc{
+font-size:13px;
+
+line-height:1.4;
+}
+
+.sign{
+margin-top:4px;
+}
+
+.sign-text{
 font-size:14px;
+
+margin-bottom:6px;
 }
 
 .sign-name{
-font-size:28px;
+font-size:30px;
+
+line-height:1.1;
 }
 
 .sign-role{
-font-size:15px;
+font-size:14px;
+}
+
+.bottom-ornament{
+margin-top:14px;
+
+gap:10px;
+}
+
+.bottom-ornament .line{
+width:70px;
+}
+
+.bottom-ornament i{
+font-size:18px;
 }
 
 .notice{
-padding:16px;
+padding:14px;
+
+border-radius:16px;
+
+gap:12px;
+
+margin-top:14px;
+}
+
+.notice i{
+font-size:22px;
 }
 
 .notice-text{
-font-size:14px;
+font-size:13px;
+
+line-height:1.6;
 }
 
 footer{
 font-size:11px;
+
+line-height:1.7;
+
+margin-top:14px;
+
+padding-bottom:20px;
+}
+
+footer strong{
+font-size:15px;
 }
 
 }
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- LOGO SEKOLAH -->
-<img src="logo.png" class="logo">
-
-<h1>VERIFIKASI PIAGAM ONLINE</h1>
-
-<div class="subtitle">
-ELEGAN • RESMI • MUDAH DIPERCAYA
-</div>
-
-<div class="ornament">
-<div class="line"></div>
-<div class="circle"></div>
-<div class="line"></div>
-</div>
-
-<div class="search-wrap">
-
-<div class="search-box">
-<i class="fa-regular fa-file-lines"></i>
-
-<input
-type="text"
-placeholder="Masukkan nomor piagam..."
->
-</div>
-
-<button>
-<i class="fa-solid fa-magnifying-glass"></i>
-VERIFIKASI
-</button>
-
-</div>
-
-<div class="result">
-
-<div class="shield">
-<i class="fa-solid fa-shield-check"></i>
-</div>
-
-<div class="verified-title">
-PIAGAM TERVERIFIKASI
-</div>
-
-<div class="desc">
-Dokumen ini asli dan diterbitkan oleh:
-</div>
-
-<div class="school">
-UPT SD NEGERI TUGUREJO 02
-</div>
-
-<div class="city">
-Kabupaten Blitar
-</div>
-
-<div class="info-box">
-
-<div class="row">
-<div class="label">Nama</div>
-<div class="value gold">
-Athallah Eza Davian Hardianto
-</div>
-</div>
-
-<div class="row">
-<div class="label">Nomor Piagam</div>
-<div class="value">
-B/420.02.02.01.04/87/409.101.558/2025
-</div>
-</div>
-
-<div class="row">
-<div class="label">Prestasi</div>
-<div class="value">
-Ranking 1 Kelas VI Semester 1
-</div>
-</div>
-
-<div class="row">
-<div class="label">Rata-rata Nilai</div>
-<div class="value">
-88.04
-</div>
-</div>
-
-<div class="row">
-<div class="label">Tahun Pelajaran</div>
-<div class="value">
-2025/2026
-</div>
-</div>
-
-<div class="row">
-<div class="label">Tanggal Terbit</div>
-<div class="value">
-2 Juni 2025
-</div>
-</div>
-
-</div>
-
-<div class="valid-box">
-
-<i class="fa-solid fa-circle-check"></i>
-
-<div>
-
-<div class="valid-title">
-VALID
-</div>
-
-<div class="valid-desc">
-Piagam ini sah dan dapat dipercaya.
-</div>
-
-</div>
-
-</div>
-
-<div class="sign">
-
-<div class="sign-text">
-Ditandatangani secara resmi oleh:
-</div>
-
-<div class="sign-name">
-Masrur, S.Ag.
-</div>
-
-<div class="sign-role">
-Kepala UPT SD Negeri Tugurejo 02
-</div>
-
-</div>
-
-<div class="bottom-ornament">
-<div class="line"></div>
-<i class="fa-solid fa-gem"></i>
-<div class="line"></div>
-</div>
-
-</div>
-
-<div class="notice">
-
-<i class="fa-solid fa-circle-info"></i>
-
-<div class="notice-text">
-Pastikan nomor piagam sesuai dengan yang tertera pada piagam.
-<br>
-Jika terdapat informasi yang tidak sesuai, hubungi pihak sekolah.
-</div>
-
-</div>
-
-<footer>
-
-Sistem verifikasi piagam digital dikembangkan untuk<br>
-
-<strong>UPT SD Negeri Tugurejo 02</strong><br>
-
-oleh Himawan Reza Annas, S.S.
-<br><br>
-
-<i class="fa-brands fa-github"></i>
-<a href="#">
-github.com/himawanrezaannas/piagam-verifikasi
-</a>
-
-<br><br>
-
-© 2025 All rights reserved.
-
-</footer>
-
-</div>
-
-</body>
-</html>
