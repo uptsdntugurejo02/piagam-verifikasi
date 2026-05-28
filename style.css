@@ -13,23 +13,25 @@ body{
 /* TOPBAR */
 
 .topbar{
-    height:82px;
+    height:88px;
     border-bottom:1px solid #e5e7eb;
     display:flex;
     align-items:center;
     padding:0 28px;
-    gap:18px;
+    gap:20px;
     background:#fff;
 }
 
 .back-btn{
-    font-size:30px;
-    color:#4b5563;
+    text-decoration:none;
+    color:#374151;
+    font-size:28px;
 }
 
-.title{
-    font-size:28px;
-    font-weight:700;
+.top-title{
+    font-size:24px;
+    font-weight:800;
+    color:#0f172a;
 }
 
 /* CONTAINER */
@@ -37,12 +39,12 @@ body{
 .container{
     max-width:760px;
     margin:auto;
-    padding:48px 28px 70px;
+    padding:40px 28px 70px;
 }
 
-/* VERIFIED */
+/* VERIFIED ICON */
 
-.verified-wrapper{
+.verified-icon-wrap{
     display:flex;
     justify-content:center;
     margin-bottom:34px;
@@ -52,69 +54,59 @@ body{
     width:170px;
     height:170px;
     border-radius:50%;
-    background:#edf8f1;
+    background:#eaf7ef;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
 .verified-circle i{
-    width:92px;
-    height:92px;
-    background:#1db446;
-    border-radius:50%;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:50px;
+    font-size:82px;
+    color:#16a34a;
 }
 
 /* TITLE */
 
-.main-title{
+.title{
     text-align:center;
-    font-size:72px;
+    font-size:68px;
     line-height:1.05;
     font-weight:800;
-    color:#071133;
-    margin-bottom:18px;
+    color:#0f172a;
+    margin-bottom:22px;
 }
 
 .subtitle{
     text-align:center;
-    font-size:30px;
     color:#6b7280;
+    font-size:30px;
+    margin-bottom:54px;
     line-height:1.5;
-    margin-bottom:48px;
 }
 
 /* FILE CARD */
 
 .file-card{
-    background:#fff;
     border:1px solid #e5e7eb;
     border-radius:34px;
     padding:34px;
-    margin-bottom:46px;
+    margin-bottom:52px;
 }
 
 .file-top{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:24px;
     margin-bottom:28px;
 }
 
-/* FIX ICON RESPONSIVE */
-
 .file-icon{
-    width:70px;
-    height:70px;
-    min-width:70px;
-    min-height:70px;
-    border-radius:20px;
-    background:#f4f5f8;
+    width:96px;
+    height:96px;
+    min-width:96px;
+    min-height:96px;
+    border-radius:24px;
+    background:#f3f4f6;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -122,13 +114,11 @@ body{
 }
 
 .file-icon img{
-    width:38px;
-    height:38px;
+    width:52px;
+    height:52px;
     object-fit:contain;
     display:block;
 }
-
-/* FILE INFO */
 
 .file-info{
     flex:1;
@@ -136,42 +126,40 @@ body{
 }
 
 .file-name{
-    font-size:24px;
-    font-weight:700;
-    line-height:1.4;
-    word-break:break-word;
+    font-size:32px;
+    font-weight:800;
     color:#111827;
-    margin-bottom:6px;
+    line-height:1.3;
+    word-break:break-word;
 }
 
 .file-desc{
-    font-size:20px;
+    font-size:22px;
     color:#6b7280;
+    margin-top:10px;
 }
-
-/* BUTTON */
 
 .view-btn{
     width:100%;
-    height:78px;
+    height:84px;
     border-radius:24px;
-    background:#2f63e1;
-    color:white;
+    background:#2563eb;
+    color:#fff;
     text-decoration:none;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:34px;
+    font-size:30px;
     font-weight:700;
 }
 
 /* SIGNATURE */
 
 .signature-label{
-    font-size:18px;
-    font-weight:700;
-    letter-spacing:2px;
     color:#9ca3af;
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:1px;
     margin-bottom:24px;
 }
 
@@ -179,58 +167,114 @@ body{
     display:flex;
     align-items:center;
     gap:22px;
+    margin-bottom:24px;
 }
 
 .school-logo{
     width:72px;
     height:72px;
-    min-width:72px;
-    min-height:72px;
-    border-radius:50%;
-    overflow:hidden;
-    background:#f3f4f6;
+    object-fit:contain;
     flex-shrink:0;
 }
 
-.school-logo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.school-info{
-    flex:1;
-}
-
 .school-name{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:6px;
+    font-size:30px;
+    font-weight:800;
+    line-height:1.2;
 }
 
 .school-location{
-    font-size:22px;
     color:#6b7280;
+    font-size:22px;
+    margin-top:6px;
 }
 
-/* TRUSTED */
-
-.trusted-box{
-    margin-top:28px;
-    width:max-content;
-    background:#dff7e5;
-    color:#17893a;
-    border-radius:18px;
-    padding:16px 24px;
-    display:flex;
+.trusted-badge{
+    display:inline-flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
+    padding:14px 28px;
+    border-radius:20px;
+    background:#dcfce7;
+    color:#15803d;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:46px;
+}
+
+/* DETAIL */
+
+.detail-card{
+    border:1px solid #e5e7eb;
+    border-radius:30px;
+    padding:14px 28px;
+    margin-bottom:42px;
+}
+
+.detail-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:22px 0;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.detail-row:last-child{
+    border-bottom:none;
+}
+
+.detail-label{
+    width:42%;
+    color:#6b7280;
+    font-size:20px;
+    font-weight:600;
+}
+
+.detail-value{
+    width:58%;
+    text-align:right;
+    color:#111827;
     font-size:20px;
     font-weight:700;
+    word-break:break-word;
 }
 
-.trusted-box i{
-    font-size:20px;
+/* INFO BOX */
+
+.info-box{
+    background:#f3f4f6;
+    border-radius:24px;
+    padding:24px;
+    font-size:18px;
+    line-height:1.7;
+    color:#4b5563;
+    margin-bottom:40px;
+}
+
+/* VERIFIED BTN */
+
+.verified-btn{
+    width:100%;
+    height:84px;
+    background:#16a34a;
+    border-radius:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    color:white;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:44px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.7;
 }
 
 /* MOBILE */
@@ -242,92 +286,81 @@ body{
         padding:0 18px;
     }
 
-    .back-btn{
-        font-size:24px;
-    }
-
-    .title{
-        font-size:22px;
+    .top-title{
+        font-size:18px;
     }
 
     .container{
-        padding:36px 20px 60px;
+        padding:28px 20px 50px;
     }
 
     .verified-circle{
-        width:150px;
-        height:150px;
+        width:120px;
+        height:120px;
     }
 
     .verified-circle i{
-        width:82px;
-        height:82px;
-        font-size:42px;
+        font-size:58px;
     }
 
-    .main-title{
-        font-size:42px;
-        margin-bottom:14px;
+    .title{
+        font-size:34px;
+        margin-bottom:16px;
     }
 
     .subtitle{
-        font-size:18px;
-        margin-bottom:36px;
+        font-size:16px;
+        margin-bottom:34px;
     }
 
     .file-card{
-        padding:22px;
-        border-radius:28px;
+        padding:20px;
+        border-radius:26px;
         margin-bottom:38px;
     }
 
     .file-top{
-        gap:16px;
-        margin-bottom:22px;
+        gap:14px;
+        margin-bottom:20px;
     }
 
-    /* FIX ICON MOBILE */
-
     .file-icon{
-        width:64px;
-        height:64px;
-        min-width:64px;
-        min-height:64px;
+        width:66px;
+        height:66px;
+        min-width:66px;
+        min-height:66px;
+        border-radius:18px;
     }
 
     .file-icon img{
-        width:34px;
-        height:34px;
+        width:36px;
+        height:36px;
     }
 
     .file-name{
         font-size:18px;
+        line-height:1.45;
     }
 
     .file-desc{
-        font-size:15px;
+        font-size:14px;
+        margin-top:6px;
     }
 
     .view-btn{
-        height:62px;
-        border-radius:20px;
-        font-size:22px;
+        height:58px;
+        border-radius:18px;
+        font-size:20px;
     }
 
     .signature-label{
-        font-size:14px;
-        margin-bottom:18px;
-    }
-
-    .signature-card{
-        gap:16px;
+        font-size:15px;
+        margin-bottom:20px;
     }
 
     .school-logo{
-        width:56px;
-        height:56px;
-        min-width:56px;
-        min-height:56px;
+        width:48px;
+        height:48px;
     }
 
     .school-name{
@@ -335,14 +368,56 @@ body{
     }
 
     .school-location{
+        font-size:14px;
+    }
+
+    .trusted-badge{
+        font-size:16px;
+        padding:12px 20px;
+        border-radius:16px;
+        margin-bottom:34px;
+    }
+
+    .detail-card{
+        padding:10px 20px;
+        border-radius:24px;
+        margin-bottom:32px;
+    }
+
+    .detail-row{
+        flex-direction:column;
+        gap:8px;
+        padding:18px 0;
+    }
+
+    .detail-label{
+        width:100%;
         font-size:15px;
     }
 
-    .trusted-box{
-        margin-top:22px;
-        padding:12px 18px;
-        border-radius:16px;
+    .detail-value{
+        width:100%;
+        text-align:left;
         font-size:16px;
+        line-height:1.5;
+    }
+
+    .info-box{
+        font-size:14px;
+        padding:18px;
+        border-radius:18px;
+        margin-bottom:30px;
+    }
+
+    .verified-btn{
+        height:58px;
+        border-radius:18px;
+        font-size:18px;
+        margin-bottom:34px;
+    }
+
+    .footer{
+        font-size:13px;
     }
 
 }
