@@ -1,331 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification details</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Verification Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 
 <body>
 
-<div class="app">
-
-<!-- TOPBAR -->
-
 <div class="topbar">
 
-<div class="back-btn">
-<i class="fa-solid fa-arrow-left"></i>
-</div>
+    <div class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
 
-<div class="top-title">
-Verification details
-</div>
-
-</div>
-
-<!-- CONTENT -->
-
-<div class="content">
-
-<!-- VERIFIED ICON -->
-
-<div class="hero-icon">
-<i class="fa-solid fa-circle-check"></i>
-</div>
-
-<!-- TITLE -->
-
-<h1>
-Dokumen Ini<br>
-Terverifikasi
-</h1>
-
-<p class="subtitle">
-Sertifikat resmi dengan validasi digital sekolah
-</p>
-
-<!-- PDF CARD -->
-
-<div class="pdf-card">
-
-<div class="pdf-left">
-
-<div class="pdf-icon">
-<i class="fa-regular fa-file-image"></i>
-</div>
-
-<div>
-
-<div class="pdf-name" id="pdfName">
-Piagam_Rangking_1_SMT_I_2025.png
-</div>
-
-<div class="pdf-pages">
-Dokumen Sertifikat Digital
-</div>
+    <div class="title">
+        Verification details
+    </div>
 
 </div>
 
-</div>
+<div class="container">
 
-<a href="#"
-target="_blank"
-class="view-btn"
-id="pdfButton">
+    <!-- ICON VERIFIED -->
+    <div class="verified-wrapper">
 
-View
+        <div class="verified-circle">
+            <i class="fa-solid fa-check"></i>
+        </div>
 
-</a>
+    </div>
 
-</div>
+    <!-- TITLE -->
+    <h1 class="main-title">
+        Dokumen Ini<br>
+        Terverifikasi
+    </h1>
 
-<!-- SECTION -->
+    <p class="subtitle">
+        Sertifikat resmi dengan validasi digital sekolah
+    </p>
 
-<div class="section-title">
-1 VALID SIGNATURE FOUND
-</div>
+    <!-- FILE CARD -->
+    <div class="file-card">
 
-<!-- SIGNATURE -->
+        <div class="file-top">
 
-<div class="signature-card">
+            <div class="file-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+            </div>
 
-<div class="signature-left">
+            <div class="file-info">
 
-<img src="logo.png" class="signature-logo">
+                <div class="file-name">
+                    Piagam_Rangking_3_SMT_I_2025.png
+                </div>
 
-<div>
+                <div class="file-desc">
+                    Dokumen Sertifikat Digital
+                </div>
 
-<div class="signature-name">
-UPT SD Negeri Tugurejo 02
-</div>
+            </div>
 
-<div class="signature-sub">
-Kabupaten Blitar
-</div>
+        </div>
 
-</div>
+        <a href="files/Piagam_Rangking_3_SMT_I_2025.png"
+           target="_blank"
+           class="view-btn">
 
-</div>
+            View
 
-<div class="trusted-badge">
+        </a>
 
-Trusted
+    </div>
 
-<i class="fa-solid fa-circle-check"></i>
+    <!-- SIGNATURE -->
+    <div class="signature-label">
+        1 VALID SIGNATURE FOUND
+    </div>
 
-</div>
+    <div class="signature-card">
 
-</div>
+        <div class="school-logo">
+            <img src="logo.png">
+        </div>
 
-<!-- DETAIL -->
+        <div class="school-info">
 
-<div class="detail-card">
+            <div class="school-name">
+                UPT SD Negeri Tugurejo 02
+            </div>
 
-<div class="detail-row">
-<span>Nama</span>
-<strong id="nama">
-Athallah Eza Davian Hardianto
-</strong>
-</div>
+            <div class="school-location">
+                Kabupaten Blitar
+            </div>
 
-<div class="detail-row">
-<span>Nomor Piagam</span>
-<strong id="nomor">
-B/420.02.02.01.04/87/409.101.558/2025
-</strong>
-</div>
+        </div>
 
-<div class="detail-row">
-<span>Prestasi</span>
-<strong id="prestasi">
-Ranking 1 Kelas VI Semester 1
-</strong>
-</div>
+    </div>
 
-<div class="detail-row">
-<span>Rata-rata Nilai</span>
-<strong id="nilai">
-88.04
-</strong>
-</div>
+    <div class="trusted-box">
 
-<div class="detail-row">
-<span>Tahun Pelajaran</span>
-<strong id="tahun">
-2025/2026
-</strong>
-</div>
+        Trusted
 
-<div class="detail-row">
-<span>Tanggal Terbit</span>
-<strong id="tanggal">
-2 Juni 2025
-</strong>
-</div>
+        <i class="fa-solid fa-circle-check"></i>
 
-<div class="detail-row">
-<span>Penanda Tangan</span>
-<strong id="penandatangan">
-Masrur, S.Ag.
-</strong>
-</div>
-
-<div class="detail-row">
-<span>Kode Sertifikat</span>
-<strong id="kode">
-CERT-2025-R1-VI-00087
-</strong>
-</div>
+    </div>
 
 </div>
-
-<!-- INFO -->
-
-<div class="info-box">
-
-"Trusted" menunjukkan dokumen telah diverifikasi secara digital oleh sistem resmi sekolah.
-
-</div>
-
-<!-- BUTTON -->
-
-<button class="verify-btn">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-Verified Certificate
-
-</button>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-© 2025 UPT SD Negeri Tugurejo 02
-
-<br><br>
-
-Created by Himawan Reza Annas, S.S.
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-const certificates = {
-
-"CERT-2025-R1-VI-00087": {
-
-nama: "Athallah Eza Davian Hardianto",
-
-nomor: "B/420.02.02.01.04/87/409.101.558/2025",
-
-prestasi: "Ranking 1 Kelas VI Semester 1",
-
-nilai: "88.04",
-
-tahun: "2025/2026",
-
-tanggal: "2 Juni 2025",
-
-penandatangan: "Masrur, S.Ag.",
-
-pdf: "pdf/Piagam_Rangking_1_SMT_I_2025.png"
-
-},
-
-"CERT-2025-R2-VI-00088": {
-
-nama: "Juna Axello Putra",
-
-nomor: "B/420.02.02.01.04/88/409.101.558/2025",
-
-prestasi: "Ranking 2 Kelas VI Semester 1",
-
-nilai: "86.81",
-
-tahun: "2025/2026",
-
-tanggal: "2 Juni 2025",
-
-penandatangan: "Masrur, S.Ag.",
-
-pdf: "pdf/Piagam_Rangking_2_SMT_I_2025.png"
-
-},
-
-"CERT-2025-R3-VI-00089": {
-
-nama: "Arjuna Apta Perwana",
-
-nomor: "B/420.02.02.01.04/89/409.101.558/2025",
-
-prestasi: "Ranking 3 Kelas VI Semester 1",
-
-nilai: "86.78",
-
-tahun: "2025/2026",
-
-tanggal: "2 Juni 2025",
-
-penandatangan: "Masrur, S.Ag.",
-
-pdf: "pdf/Piagam_Rangking_3_SMT_I_2025.png"
-
-}
-
-};
-
-const params = new URLSearchParams(window.location.search);
-
-const cert = params.get("cert");
-
-if(cert && certificates[cert]){
-
-const data = certificates[cert];
-
-document.getElementById("nama").innerText = data.nama;
-
-document.getElementById("nomor").innerText = data.nomor;
-
-document.getElementById("prestasi").innerText = data.prestasi;
-
-document.getElementById("nilai").innerText = data.nilai;
-
-document.getElementById("tahun").innerText = data.tahun;
-
-document.getElementById("tanggal").innerText = data.tanggal;
-
-document.getElementById("penandatangan").innerText = data.penandatangan;
-
-document.getElementById("kode").innerText = cert;
-
-document.getElementById("pdfButton").href = data.pdf;
-
-document.getElementById("pdfName").innerText =
-data.pdf.replace("pdf/","");
-
-}
-
-</script>
 
 </body>
 </html>
