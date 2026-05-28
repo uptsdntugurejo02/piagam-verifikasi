@@ -71,7 +71,7 @@ Sertifikat resmi dengan validasi digital sekolah
 
 <div>
 
-<div class="pdf-name">
+<div class="pdf-name" id="pdfName">
 PIAGAM_RANKING_1_2025.pdf
 </div>
 
@@ -83,9 +83,10 @@ PIAGAM_RANKING_1_2025.pdf
 
 </div>
 
-<a href="pdf/athallah.pdf"
+<a href="#"
 target="_blank"
-class="view-btn">
+class="view-btn"
+id="pdfButton">
 
 View
 
@@ -137,32 +138,51 @@ Trusted
 
 <div class="detail-row">
 <span>Nama</span>
-<strong>Athallah Eza Davian Hardianto</strong>
+<strong id="nama">
+Athallah Eza Davian Hardianto
+</strong>
 </div>
 
 <div class="detail-row">
 <span>Nomor Piagam</span>
-<strong>B/420.02.02.01.04/87/409.101.558/2025</strong>
+<strong id="nomor">
+B/420.02.02.01.04/87/409.101.558/2025
+</strong>
 </div>
 
 <div class="detail-row">
 <span>Prestasi</span>
-<strong>Ranking 1 Kelas VI Semester 1</strong>
+<strong id="prestasi">
+Ranking 1 Kelas VI Semester 1
+</strong>
 </div>
 
 <div class="detail-row">
 <span>Rata-rata Nilai</span>
-<strong>88.04</strong>
+<strong id="nilai">
+88.04
+</strong>
 </div>
 
 <div class="detail-row">
 <span>Tahun Pelajaran</span>
-<strong>2025/2026</strong>
+<strong id="tahun">
+2025/2026
+</strong>
 </div>
 
 <div class="detail-row">
 <span>Tanggal Terbit</span>
-<strong>2 Juni 2025</strong>
+<strong id="tanggal">
+2 Juni 2025
+</strong>
+</div>
+
+<div class="detail-row">
+<span>Kode Sertifikat</span>
+<strong id="kode">
+CERT-2025-R1-VI-00087
+</strong>
 </div>
 
 </div>
@@ -200,6 +220,94 @@ Created by Himawan Reza Annas, S.S.
 </div>
 
 </div>
+
+<script>
+
+const certificates = {
+
+"CERT-2025-R1-VI-00087": {
+
+nama: "Athallah Eza Davian Hardianto",
+
+nomor: "B/420.02.02.01.04/87/409.101.558/2025",
+
+prestasi: "Ranking 1 Kelas VI Semester 1",
+
+nilai: "88.04",
+
+tahun: "2025/2026",
+
+tanggal: "2 Juni 2025",
+
+pdf: "pdf/athallah.pdf"
+
+},
+
+"CERT-2025-R2-VI-00088": {
+
+nama: "Juna Axello Putra",
+
+nomor: "B/420.02.02.01.04/88/409.101.558/2025",
+
+prestasi: "Ranking 2 Kelas VI Semester 1",
+
+nilai: "86.81",
+
+tahun: "2025/2026",
+
+tanggal: "2 Juni 2025",
+
+pdf: "pdf/juna.pdf"
+
+},
+
+"CERT-2025-R3-VI-00089": {
+
+nama: "Arjuna Apta Perwana",
+
+nomor: "B/420.02.02.01.04/89/409.101.558/2025",
+
+prestasi: "Ranking 3 Kelas VI Semester 1",
+
+nilai: "86.78",
+
+tahun: "2025/2026",
+
+tanggal: "2 Juni 2025",
+
+pdf: "pdf/arjuna.pdf"
+
+}
+
+};
+
+const params = new URLSearchParams(window.location.search);
+
+const cert = params.get("cert");
+
+if(cert && certificates[cert]){
+
+const data = certificates[cert];
+
+document.getElementById("nama").innerText = data.nama;
+
+document.getElementById("nomor").innerText = data.nomor;
+
+document.getElementById("prestasi").innerText = data.prestasi;
+
+document.getElementById("nilai").innerText = data.nilai;
+
+document.getElementById("tahun").innerText = data.tahun;
+
+document.getElementById("tanggal").innerText = data.tanggal;
+
+document.getElementById("kode").innerText = cert;
+
+document.getElementById("pdfButton").href = data.pdf;
+
+}
+
+</script>
 
 </body>
 </html>
