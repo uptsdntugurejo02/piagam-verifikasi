@@ -6,46 +6,67 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:#f5f6f8;
+background:#f3f4f6;
 color:#1f2937;
+overflow-x:hidden;
 }
 
+/* APP */
+
 .app{
-max-width:480px;
+width:100%;
+max-width:520px;
 margin:auto;
-min-height:100vh;
 background:white;
+min-height:100vh;
+box-shadow:0 0 30px rgba(0,0,0,.04);
 }
+
+/* TOPBAR */
 
 .topbar{
 height:72px;
 display:flex;
 align-items:center;
 padding:0 22px;
-gap:18px;
 border-bottom:1px solid #ececec;
+background:white;
+position:sticky;
+top:0;
+z-index:10;
 }
 
-.topbar i{
+.top-left{
+width:40px;
+}
+
+.top-left i{
 font-size:22px;
 color:#555;
+cursor:pointer;
 }
 
-.topbar h1{
-font-size:26px;
+.top-title{
+font-size:24px;
 font-weight:700;
 }
 
+/* CONTENT */
+
 .content{
-padding:28px 22px 40px;
+padding:30px 22px 40px;
 }
 
+/* LOGO */
+
 .logo{
-width:110px;
+width:100px;
 display:block;
 margin:auto;
 margin-bottom:24px;
 }
+
+/* HERO */
 
 .hero-icon{
 width:120px;
@@ -64,33 +85,39 @@ font-size:70px;
 color:#16a34a;
 }
 
-h2{
-font-size:42px;
+/* TITLE */
+
+h1{
+font-size:44px;
 font-weight:800;
 line-height:1.15;
 text-align:center;
-margin-bottom:12px;
+margin-bottom:14px;
+color:#111827;
 }
 
-.sub{
+.subtitle{
 text-align:center;
 font-size:18px;
 color:#6b7280;
-line-height:1.6;
+line-height:1.7;
 margin-bottom:34px;
 }
 
-.doc-card{
+/* PDF CARD */
+
+.pdf-card{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
 border:1px solid #e5e7eb;
-border-radius:20px;
+border-radius:22px;
 margin-bottom:34px;
+background:white;
 }
 
-.doc-left{
+.pdf-left{
 display:flex;
 gap:16px;
 align-items:center;
@@ -99,11 +126,11 @@ align-items:center;
 .pdf-icon{
 width:58px;
 height:58px;
-border-radius:16px;
+border-radius:18px;
 background:#f3f4f6;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 }
 
 .pdf-icon i{
@@ -111,88 +138,101 @@ font-size:28px;
 color:#ef4444;
 }
 
-.doc-name{
+.pdf-name{
 font-size:18px;
 font-weight:700;
 margin-bottom:6px;
+line-height:1.5;
 }
 
-.doc-pages{
+.pdf-pages{
 font-size:15px;
 color:#6b7280;
 }
 
 .view-btn{
+text-decoration:none;
 font-size:18px;
 font-weight:700;
 color:#2563eb;
 }
 
+/* SECTION */
+
 .section-title{
-font-size:15px;
+font-size:14px;
 font-weight:700;
-color:#888;
+color:#8b8b8b;
+letter-spacing:1px;
 margin-bottom:18px;
 }
+
+/* SIGNATURE CARD */
 
 .signature-card{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding-bottom:22px;
+padding-bottom:24px;
 border-bottom:1px solid #ececec;
-margin-bottom:26px;
+margin-bottom:28px;
+gap:16px;
 }
 
-.sign-left{
+.signature-left{
 display:flex;
 gap:14px;
 align-items:center;
 }
 
-.sign-avatar{
+.signature-avatar{
 width:54px;
 height:54px;
 border-radius:50%;
 background:#f3f4f6;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
+flex-shrink:0;
 }
 
-.sign-avatar i{
-font-size:24px;
+.signature-avatar i{
+font-size:22px;
 color:#666;
 }
 
-.sign-name{
-font-size:22px;
+.signature-name{
+font-size:21px;
 font-weight:700;
 margin-bottom:4px;
+line-height:1.4;
 }
 
-.sign-company{
-font-size:16px;
+.signature-sub{
+font-size:15px;
 color:#6b7280;
 }
 
-.trusted{
+.trusted-badge{
 background:#dcfce7;
 color:#15803d;
 padding:10px 16px;
 border-radius:14px;
-font-size:16px;
+font-size:15px;
 font-weight:700;
 display:flex;
 align-items:center;
 gap:8px;
+white-space:nowrap;
 }
+
+/* DETAIL */
 
 .detail-card{
 background:#fafafa;
-border-radius:22px;
+border-radius:24px;
 padding:24px;
-margin-bottom:26px;
+margin-bottom:28px;
 }
 
 .detail-row{
@@ -205,6 +245,7 @@ border-bottom:1px solid #ececec;
 
 .detail-row:last-child{
 border:none;
+padding-bottom:0;
 }
 
 .detail-row span{
@@ -214,24 +255,29 @@ color:#6b7280;
 
 .detail-row strong{
 font-size:18px;
-line-height:1.6;
+line-height:1.7;
+word-break:break-word;
 }
+
+/* INFO */
 
 .info-box{
 background:#f3f4f6;
 padding:20px;
 border-radius:18px;
 font-size:15px;
-line-height:1.7;
+line-height:1.8;
 color:#555;
-margin-bottom:28px;
+margin-bottom:30px;
 }
+
+/* BUTTON */
 
 .verify-btn{
 width:100%;
 height:62px;
 border:none;
-border-radius:18px;
+border-radius:20px;
 background:#16a34a;
 color:white;
 font-size:20px;
@@ -243,35 +289,162 @@ gap:12px;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 .footer{
 text-align:center;
-margin-top:28px;
+margin-top:30px;
 font-size:14px;
+line-height:1.8;
 color:#777;
+}
+
+/* DESKTOP */
+
+@media(min-width:900px){
+
+body{
+background:
+linear-gradient(
+90deg,
+#eef0f3,
+#f8fafc,
+#eef0f3
+);
+}
+
+.app{
+margin:40px auto;
+border-radius:28px;
+overflow:hidden;
+min-height:auto;
+}
+
 }
 
 /* MOBILE */
 
 @media(max-width:480px){
 
-h2{
-font-size:34px;
+.app{
+max-width:100%;
 }
 
-.doc-card{
+.topbar{
+height:64px;
+padding:0 16px;
+}
+
+.top-title{
+font-size:20px;
+}
+
+.content{
+padding:24px 16px 36px;
+}
+
+.logo{
+width:84px;
+margin-bottom:20px;
+}
+
+.hero-icon{
+width:96px;
+height:96px;
+margin-bottom:18px;
+}
+
+.hero-icon i{
+font-size:54px;
+}
+
+h1{
+font-size:34px;
+line-height:1.15;
+margin-bottom:12px;
+}
+
+.subtitle{
+font-size:16px;
+line-height:1.7;
+margin-bottom:26px;
+}
+
+.pdf-card{
 flex-direction:column;
 align-items:flex-start;
 gap:18px;
+padding:18px;
+margin-bottom:28px;
+}
+
+.pdf-left{
+width:100%;
+}
+
+.view-btn{
+width:100%;
+height:48px;
+border-radius:14px;
+background:#2563eb;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.section-title{
+font-size:12px;
+margin-bottom:14px;
 }
 
 .signature-card{
 flex-direction:column;
 align-items:flex-start;
 gap:18px;
+padding-bottom:22px;
+margin-bottom:24px;
 }
 
-.trusted{
+.trusted-badge{
 align-self:flex-start;
+}
+
+.signature-name{
+font-size:18px;
+}
+
+.detail-card{
+padding:20px 18px;
+margin-bottom:24px;
+}
+
+.detail-row{
+padding:14px 0;
+}
+
+.detail-row strong{
+font-size:16px;
+line-height:1.6;
+}
+
+.info-box{
+padding:18px;
+font-size:14px;
+line-height:1.7;
+margin-bottom:24px;
+}
+
+.verify-btn{
+height:58px;
+font-size:18px;
+border-radius:16px;
+}
+
+.footer{
+margin-top:24px;
+font-size:13px;
+line-height:1.7;
 }
 
 }
