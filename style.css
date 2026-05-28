@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
-
 *{
 margin:0;
 padding:0;
@@ -8,747 +6,423 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-
 background:
-linear-gradient(rgba(248,245,239,.95),rgba(248,245,239,.95)),
+linear-gradient(rgba(248,245,239,.96),rgba(248,245,239,.96)),
 url('https://www.transparenttextures.com/patterns/arabesque.png');
-
-background-size:cover;
-background-attachment:fixed;
-
+background-color:#f8f5ef;
 min-height:100vh;
-
-color:#2b2119;
-
+color:#2f2419;
 overflow-x:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
-
-/* =========================
-   CONTAINER
-========================= */
 
 .container{
-width:94%;
-max-width:1280px;
-
-margin:auto;
-
-padding:18px 24px 14px;
-
-min-height:100vh;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
+width:100%;
+max-width:1050px;
 }
 
-/* =========================
-   LOGO
-========================= */
-
-.logo{
-width:120px;
-height:auto;
-
-display:block;
-
-margin:0 auto 10px;
-
-object-fit:contain;
-
-filter:
-drop-shadow(0 6px 16px rgba(0,0,0,.18));
-
-transition:.3s;
-}
-
-.logo:hover{
-transform:scale(1.03);
-}
-
-/* =========================
-   TITLE
-========================= */
-
-h1{
-font-family:'Cinzel',serif;
-
-font-size:58px;
-font-weight:700;
-
+.top{
 text-align:center;
-
-line-height:1.08;
-
-letter-spacing:1px;
-
-color:#241913;
-
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-
-font-size:16px;
-font-weight:600;
-
-letter-spacing:5px;
-
-color:#c79c43;
-
 margin-bottom:18px;
 }
 
-/* =========================
-   ORNAMENT
-========================= */
+.logo{
+width:130px;
+height:auto;
+display:block;
+margin:0 auto 18px;
+filter:drop-shadow(0 6px 16px rgba(0,0,0,.15));
+}
+
+h1{
+font-family:'Cinzel',serif;
+font-size:62px;
+font-weight:700;
+line-height:1;
+color:#2b1d17;
+margin-bottom:12px;
+}
+
+.subtitle{
+font-size:18px;
+font-weight:600;
+letter-spacing:4px;
+color:#c89b35;
+margin-bottom:18px;
+}
 
 .ornament{
 display:flex;
 align-items:center;
 justify-content:center;
-
 gap:14px;
-
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
-.ornament .line{
-width:140px;
+.ornament-line{
+width:120px;
 height:2px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-#d7b46c,
-transparent
-);
+background:linear-gradient(to right,transparent,#d6b15b,transparent);
 }
 
-.ornament .circle{
+.ornament-circle{
 width:24px;
 height:24px;
-
+border:3px solid #d7b462;
 border-radius:50%;
-
-border:3px solid #d7b46c;
-
 background:white;
-
-box-shadow:
-0 0 0 6px rgba(215,180,108,.12);
 }
-
-/* =========================
-   SEARCH
-========================= */
 
 .search-wrap{
 display:flex;
 gap:14px;
-
 margin-bottom:20px;
 }
 
 .search-box{
 flex:1;
-
 display:flex;
 align-items:center;
-
-background:rgba(255,255,255,.9);
-
-border:1px solid #e8ddca;
-
+background:#fff;
 border-radius:22px;
-
 padding:0 22px;
-
 height:66px;
-
-box-shadow:
-0 8px 24px rgba(0,0,0,.05);
+box-shadow:0 8px 24px rgba(0,0,0,.05);
+border:1px solid #eadfcb;
 }
 
 .search-box i{
 font-size:24px;
-
-color:#c69731;
-
-margin-right:16px;
+color:#c9982b;
+margin-right:14px;
 }
 
 .search-box input{
+width:100%;
 border:none;
 outline:none;
-
-width:100%;
-
 background:transparent;
-
 font-family:'Inter',sans-serif;
-
 font-size:19px;
 font-weight:500;
-
-color:#2c241d;
 }
 
-.search-box input::placeholder{
-color:#b6a899;
-}
-
-button{
-width:250px;
-
+.search-btn{
+width:240px;
 border:none;
-outline:none;
-
 border-radius:22px;
-
-background:
-linear-gradient(
-145deg,
-#d7a646,
-#b9831e
-);
-
+background:linear-gradient(145deg,#d6a132,#b97b0f);
 color:white;
-
-font-size:18px;
+font-size:22px;
 font-weight:700;
-
 cursor:pointer;
-
-transition:.25s;
-
-box-shadow:
-0 8px 24px rgba(183,130,28,.28);
+box-shadow:0 10px 26px rgba(185,123,15,.25);
 }
-
-button:hover{
-transform:translateY(-2px);
-
-box-shadow:
-0 12px 28px rgba(183,130,28,.38);
-}
-
-/* =========================
-   RESULT CARD
-========================= */
 
 .result{
-position:relative;
-
 background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.96),
-rgba(255,251,246,.96)
-);
+linear-gradient(rgba(255,255,255,.96),rgba(255,251,246,.96)),
+url('https://www.transparenttextures.com/patterns/cream-paper.png');
 
-border-radius:32px;
-
-border:1px solid #dfe7d8;
-
-padding:26px 34px;
-
-overflow:hidden;
-
-box-shadow:
-0 12px 36px rgba(0,0,0,.06);
+border-radius:34px;
+padding:34px;
+border:1px solid #e4d9c6;
+box-shadow:0 10px 40px rgba(0,0,0,.06);
+margin-bottom:20px;
 }
-
-/* Batik overlay */
-
-.result::before{
-content:"";
-
-position:absolute;
-inset:0;
-
-background:
-url('https://www.transparenttextures.com/patterns/white-diamond-dark.png');
-
-opacity:.04;
-
-pointer-events:none;
-}
-
-/* Batik corner */
-
-.result::after{
-content:"";
-
-position:absolute;
-
-top:0;
-right:0;
-
-width:220px;
-height:220px;
-
-background:
-radial-gradient(circle at top right,
-rgba(214,174,92,.16),
-transparent 70%);
-
-pointer-events:none;
-}
-
-/* =========================
-   SHIELD
-========================= */
 
 .shield{
 text-align:center;
-
-margin-bottom:12px;
+margin-bottom:16px;
 }
 
 .shield i{
-font-size:74px;
-
-color:#d4a03e;
-
-background:
-radial-gradient(circle,#fff6dc,#f5e3a9);
-
+font-size:72px;
+color:#d4a12c;
+background:radial-gradient(circle,#fff8d4,#f3e4aa);
 width:130px;
 height:130px;
-
 line-height:130px;
-
 border-radius:50%;
-
-box-shadow:
-0 12px 30px rgba(213,163,59,.22);
 }
 
-/* =========================
-   VERIFIED TITLE
-========================= */
-
-.verified-title{
+.result-title{
 font-family:'Cinzel',serif;
-
-font-size:46px;
+font-size:54px;
 font-weight:700;
-
-text-align:center;
-
-line-height:1.1;
-
 color:#2f6133;
-
-margin-bottom:10px;
+text-align:center;
+line-height:1.05;
+margin-bottom:12px;
 }
 
 .desc{
 text-align:center;
-
-font-size:18px;
-
-line-height:1.6;
-
-margin-bottom:18px;
-
-color:#4e4136;
+font-size:24px;
+margin-bottom:8px;
 }
 
 .school{
 font-family:'Cinzel',serif;
-
-font-size:30px;
+font-size:42px;
 font-weight:700;
-
 text-align:center;
-
-line-height:1.2;
-
-margin-bottom:6px;
+line-height:1.1;
+margin-bottom:4px;
 }
 
 .city{
 text-align:center;
-
-font-size:18px;
-
-margin-bottom:22px;
+font-size:22px;
+margin-bottom:24px;
 }
 
-/* =========================
-   TABLE
-========================= */
-
 .info-box{
-background:
-rgba(255,255,255,.76);
-
-border:1px solid #ead7b6;
-
+background:rgba(255,255,255,.76);
+border:1px solid #efd7b6;
 border-radius:22px;
-
-padding:12px 26px;
-
-margin-bottom:20px;
-
-backdrop-filter:blur(4px);
+padding:14px 24px;
+margin-bottom:18px;
 }
 
 .row{
 display:grid;
-
 grid-template-columns:240px 1fr;
-
 padding:16px 0;
-
 border-bottom:1px solid #eee4d6;
-
 gap:20px;
 }
 
 .row:last-child{
-border-bottom:none;
+border:none;
 }
 
 .label{
-font-size:18px;
-font-weight:500;
-
-color:#3d3128;
+font-size:20px;
+font-weight:600;
 }
 
 .value{
 font-size:20px;
 font-weight:600;
-
-line-height:1.5;
-
 word-break:break-word;
 }
 
 .gold{
-color:#c7932e;
+color:#c58b18;
 }
 
-/* =========================
-   VALID BOX
-========================= */
-
-.valid-box{
+.valid{
 display:flex;
 align-items:center;
-
 gap:22px;
-
-background:
-linear-gradient(
-145deg,
-#edf8e7,
-#e7f6e4
-);
-
-border:1px solid #cfe2c8;
-
+background:linear-gradient(145deg,#edf8e7,#f7f6e4);
+border:1px solid #cfe2b6;
 border-radius:20px;
-
-padding:20px 24px;
-
-margin-bottom:22px;
+padding:18px 24px;
+margin-bottom:18px;
 }
 
-.valid-box i{
-font-size:64px;
-
-color:#2ec237;
+.valid i{
+font-size:58px;
+color:#30bf31;
 }
 
 .valid-title{
-font-size:40px;
+font-size:38px;
 font-weight:700;
-
-line-height:1;
-
 color:#21872d;
+margin-bottom:6px;
 }
 
 .valid-desc{
-font-size:17px;
-
-margin-top:6px;
-
-color:#2c472f;
+font-size:18px;
 }
-
-/* =========================
-   SIGNATURE
-========================= */
 
 .sign{
 text-align:center;
-
-margin-top:6px;
+margin-bottom:16px;
 }
 
-.sign-text{
-font-size:18px;
-
-margin-bottom:8px;
+.sign-title{
+font-family:'Cinzel',serif;
+font-size:28px;
+margin-bottom:10px;
 }
 
 .sign-name{
 font-family:'Cinzel',serif;
-
 font-size:40px;
 font-weight:700;
-
-margin-bottom:4px;
+margin-bottom:8px;
 }
 
 .sign-role{
-font-size:18px;
+font-size:22px;
 }
-
-/* =========================
-   BOTTOM ORNAMENT
-========================= */
 
 .bottom-ornament{
 display:flex;
 align-items:center;
 justify-content:center;
-
 gap:14px;
-
-margin-top:18px;
-}
-
-.bottom-ornament .line{
-width:140px;
-height:2px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-#d3b06a,
-transparent
-);
+margin-bottom:20px;
 }
 
 .bottom-ornament i{
 font-size:24px;
-
-color:#d3b06a;
+color:#d3a54d;
 }
 
-/* =========================
-   NOTICE
-========================= */
-
 .notice{
-margin-top:16px;
-
 display:flex;
 align-items:flex-start;
-
-gap:16px;
-
-background:
-rgba(255,250,243,.9);
-
+gap:18px;
+background:rgba(255,250,243,.9);
 border:1px solid #e8d8bc;
-
 border-radius:20px;
-
 padding:18px 22px;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.03);
+margin-bottom:18px;
 }
 
 .notice i{
-font-size:30px;
-
-color:#ca972c;
+font-size:24px;
+color:#d39a27;
+padding-top:4px;
 }
 
 .notice-text{
 font-size:17px;
-
 line-height:1.7;
-
-color:#4a3e35;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-margin-top:16px;
-
+.footer{
 text-align:center;
-
-font-size:14px;
-
-line-height:1.9;
-
-color:#6b5b4e;
+color:#8b7968;
+font-size:16px;
+line-height:1.8;
 }
 
-footer strong{
+.footer strong{
 font-size:20px;
-
 color:#2c241d;
 }
 
-footer a{
-color:#b9861f;
-
+.footer a{
+color:#8b6e4f;
 text-decoration:none;
-
-font-weight:600;
+word-break:break-word;
 }
 
-footer i{
-margin-right:6px;
+.footer-icons{
+margin:10px 0;
+color:#d4a12c;
+font-size:22px;
+display:flex;
+justify-content:center;
+gap:18px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:768px){
 
-.container{
-padding:16px 14px 22px;
+body{
+padding:14px;
 }
 
 .logo{
-width:94px;
+width:90px;
 }
 
 h1{
-font-size:38px;
-
-line-height:1.15;
+font-size:58px;
+line-height:.95;
 }
 
 .subtitle{
-font-size:12px;
-
-letter-spacing:3px;
-}
-
-.ornament .line{
-width:70px;
+font-size:13px;
+letter-spacing:2px;
 }
 
 .search-wrap{
 flex-direction:column;
-gap:12px;
 }
 
 .search-box{
-height:56px;
-
-padding:0 16px;
+height:58px;
+border-radius:18px;
 }
 
-.search-box i{
-font-size:20px;
-}
-
-.search-box input{
-font-size:16px;
-}
-
-button{
+.search-btn{
 width:100%;
-height:56px;
-
-font-size:16px;
+height:58px;
+border-radius:18px;
 }
 
 .result{
-padding:18px 14px;
+padding:22px 16px;
 }
 
 .shield i{
-width:96px;
-height:96px;
-
-line-height:96px;
-
-font-size:54px;
+width:95px;
+height:95px;
+line-height:95px;
+font-size:48px;
 }
 
-.verified-title{
-font-size:30px;
-
-line-height:1.2;
+.result-title{
+font-size:42px;
 }
 
 .desc{
-font-size:15px;
+font-size:18px;
 }
 
 .school{
-font-size:22px;
+font-size:28px;
 }
 
 .city{
-font-size:15px;
-}
-
-.info-box{
-padding:8px 14px;
+font-size:18px;
 }
 
 .row{
 grid-template-columns:1fr;
-
 gap:8px;
-
-padding:14px 0;
 }
 
-.label{
-font-size:15px;
-}
-
+.label,
 .value{
-font-size:16px;
+font-size:17px;
 }
 
-.valid-box{
+.valid{
 padding:16px;
-
 gap:14px;
 }
 
-.valid-box i{
-font-size:46px;
-}
-
 .valid-title{
-font-size:30px;
+font-size:28px;
 }
 
 .valid-desc{
-font-size:14px;
+font-size:15px;
+}
+
+.sign-title{
+font-size:20px;
 }
 
 .sign-name{
-font-size:30px;
+font-size:32px;
 }
 
 .sign-role{
-font-size:15px;
+font-size:17px;
 }
 
 .notice{
@@ -756,17 +430,7 @@ padding:16px;
 }
 
 .notice-text{
-font-size:14px;
-}
-
-footer{
-font-size:12px;
-
-line-height:1.8;
-}
-
-footer strong{
-font-size:16px;
+font-size:15px;
 }
 
 }
