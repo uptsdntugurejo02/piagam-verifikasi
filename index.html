@@ -1,854 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<title>Verifikasi Piagam Online</title>
 
-body{
-font-family:'Inter',sans-serif;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-background:
-linear-gradient(rgba(248,245,239,.95),rgba(248,245,239,.95)),
-url('https://www.transparenttextures.com/patterns/arabesque.png');
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-background-size:cover;
-background-attachment:fixed;
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-min-height:100vh;
+<link rel="stylesheet" href="style.css">
 
-color:#2b2119;
+</head>
 
-overflow-x:hidden;
-}
+<body>
 
-/* CONTAINER */
+<div class="container">
 
-.container{
-width:94%;
-max-width:1280px;
+<div class="top">
 
-margin:auto;
+<img src="logo.png" class="logo">
 
-padding:18px 24px 14px;
+<h1>VERIFIKASI PIAGAM ONLINE</h1>
 
-min-height:100vh;
+<div class="subtitle">
+ELEGAN • RESMI • MUDAH DIPERCAYA
+</div>
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
+<div class="ornament">
+<div class="ornament-line"></div>
+<div class="ornament-circle"></div>
+<div class="ornament-line"></div>
+</div>
 
-/* LOGO */
+</div>
 
-.logo{
-width:120px;
-height:auto;
+<div class="search-wrap">
 
-display:block;
+<div class="search-box">
+<i class="fa-regular fa-file-lines"></i>
 
-margin:0 auto 10px;
+<input type="text"
+placeholder="Masukkan nomor piagam...">
+</div>
 
-object-fit:contain;
+<button class="search-btn">
+<i class="fa-solid fa-magnifying-glass"></i>
+VERIFIKASI
+</button>
 
-filter:
-drop-shadow(0 6px 16px rgba(0,0,0,.18));
+</div>
 
-transition:.3s;
-}
+<div class="result">
 
-.logo:hover{
-transform:scale(1.03);
-}
+<div class="shield">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
 
-/* TITLE */
+<div class="result-title">
+PIAGAM<br>TERVERIFIKASI
+</div>
 
-h1{
-font-family:'Cinzel',serif;
+<div class="desc">
+Dokumen ini asli dan diterbitkan oleh:
+</div>
 
-font-size:58px;
-font-weight:700;
+<div class="school">
+UPT SD NEGERI TUGUREJO 02
+</div>
 
-text-align:center;
+<div class="city">
+Kabupaten Blitar
+</div>
 
-line-height:1.08;
+<div class="info-box">
 
-letter-spacing:1px;
+<div class="row">
+<div class="label">Nama</div>
+<div class="value gold">
+Athallah Eza Davian Hardianto
+</div>
+</div>
 
-color:#241913;
+<div class="row">
+<div class="label">Nomor Piagam</div>
+<div class="value">
+B/420.02.02.01.04/87/409.101.558/2025
+</div>
+</div>
 
-margin-bottom:10px;
-}
+<div class="row">
+<div class="label">Prestasi</div>
+<div class="value">
+Ranking 1 Kelas VI Semester 1
+</div>
+</div>
 
-.subtitle{
-text-align:center;
+<div class="row">
+<div class="label">Tahun Pelajaran</div>
+<div class="value">
+2025/2026
+</div>
+</div>
 
-font-size:16px;
-font-weight:600;
+<div class="row">
+<div class="label">Tanggal Terbit</div>
+<div class="value">
+2 Juni 2025
+</div>
+</div>
 
-letter-spacing:5px;
+</div>
 
-color:#c79c43;
+<div class="valid">
 
-margin-bottom:18px;
-}
+<i class="fa-solid fa-circle-check"></i>
 
-/* ORNAMENT */
+<div>
 
-.ornament{
-display:flex;
-align-items:center;
-justify-content:center;
+<div class="valid-title">
+VALID
+</div>
 
-gap:14px;
+<div class="valid-desc">
+Piagam ini sah dan dapat dipercaya.
+</div>
 
-margin-bottom:22px;
-}
+</div>
 
-.ornament .line{
-width:140px;
-height:2px;
+</div>
 
-background:
-linear-gradient(
-90deg,
-transparent,
-#d7b46c,
-transparent
-);
-}
+<div class="sign">
 
-.ornament .circle{
-width:24px;
-height:24px;
+<div class="sign-title">
+Ditandatangani secara resmi oleh:
+</div>
 
-border-radius:50%;
+<div class="sign-name">
+Masrur, S.Ag.
+</div>
 
-border:3px solid #d7b46c;
+<div class="sign-role">
+Kepala UPT SD Negeri Tugurejo 02
+</div>
 
-background:white;
+</div>
 
-box-shadow:
-0 0 0 6px rgba(215,180,108,.12);
-}
+<div class="bottom-ornament">
+<i class="fa-solid fa-leaf"></i>
+<div class="ornament-line"></div>
+<i class="fa-solid fa-gem"></i>
+<div class="ornament-line"></div>
+<i class="fa-solid fa-leaf"></i>
+</div>
 
-/* SEARCH */
+</div>
 
-.search-wrap{
-display:flex;
-gap:14px;
+<div class="notice">
 
-margin-bottom:20px;
-}
+<i class="fa-solid fa-circle-info"></i>
 
-.search-box{
-flex:1;
+<div class="notice-text">
+Pastikan nomor piagam sesuai dengan yang tertera pada piagam.<br>
+Jika terdapat informasi yang tidak sesuai, hubungi pihak sekolah.
+</div>
 
-display:flex;
-align-items:center;
+</div>
 
-background:rgba(255,255,255,.9);
+<div class="footer">
 
-border:1px solid #e8ddca;
+<div class="footer-icons">
+<i class="fa-solid fa-leaf"></i>
+<i class="fa-solid fa-award"></i>
+<i class="fa-solid fa-leaf"></i>
+</div>
 
-border-radius:22px;
+Sistem verifikasi piagam digital dikembangkan untuk<br>
 
-padding:0 22px;
+<strong>UPT SD Negeri Tugurejo 02</strong><br>
 
-height:66px;
+oleh Himawan Reza Annas, S.S.<br>
 
-box-shadow:
-0 8px 24px rgba(0,0,0,.05);
-}
+<a href="#">
+<i class="fa-brands fa-github"></i>
+Repository:
+github.com/himawanrezaannas/piagam-verifikasi
+</a>
 
-.search-box i{
-font-size:24px;
+<br><br>
 
-color:#c69731;
+© 2025 All rights reserved.
 
-margin-right:16px;
-}
+</div>
 
-.search-box input{
-border:none;
-outline:none;
+</div>
 
-width:100%;
-
-background:transparent;
-
-font-family:'Inter',sans-serif;
-
-font-size:19px;
-font-weight:500;
-
-color:#2c241d;
-}
-
-.search-box input::placeholder{
-color:#b6a899;
-}
-
-button{
-width:250px;
-
-border:none;
-outline:none;
-
-border-radius:22px;
-
-background:
-linear-gradient(
-145deg,
-#d7a646,
-#b9831e
-);
-
-color:white;
-
-font-size:18px;
-font-weight:700;
-
-cursor:pointer;
-
-transition:.25s;
-
-box-shadow:
-0 8px 24px rgba(183,130,28,.28);
-}
-
-button:hover{
-transform:translateY(-2px);
-
-box-shadow:
-0 12px 28px rgba(183,130,28,.38);
-}
-
-/* RESULT CARD */
-
-.result{
-position:relative;
-
-background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.96),
-rgba(255,251,246,.96)
-);
-
-border-radius:32px;
-
-border:1px solid #dfe7d8;
-
-padding:26px 34px;
-
-overflow:hidden;
-
-box-shadow:
-0 12px 36px rgba(0,0,0,.06);
-}
-
-.result::before{
-content:"";
-
-position:absolute;
-inset:0;
-
-background:
-url('https://www.transparenttextures.com/patterns/white-diamond-dark.png');
-
-opacity:.04;
-
-pointer-events:none;
-}
-
-.result::after{
-content:"";
-
-position:absolute;
-
-top:0;
-right:0;
-
-width:220px;
-height:220px;
-
-background:
-radial-gradient(circle at top right,
-rgba(214,174,92,.16),
-transparent 70%);
-
-pointer-events:none;
-}
-
-/* SHIELD */
-
-.shield{
-text-align:center;
-
-margin-bottom:12px;
-}
-
-.shield i{
-font-size:74px;
-
-color:#d4a03e;
-
-background:
-radial-gradient(circle,#fff6dc,#f5e3a9);
-
-width:130px;
-height:130px;
-
-line-height:130px;
-
-border-radius:50%;
-
-box-shadow:
-0 12px 30px rgba(213,163,59,.22);
-}
-
-/* VERIFIED TITLE */
-
-.verified-title{
-font-family:'Cinzel',serif;
-
-font-size:46px;
-font-weight:700;
-
-text-align:center;
-
-line-height:1.1;
-
-color:#2f6133;
-
-margin-bottom:10px;
-}
-
-.desc{
-text-align:center;
-
-font-size:18px;
-
-line-height:1.6;
-
-margin-bottom:18px;
-
-color:#4e4136;
-}
-
-.school{
-font-family:'Cinzel',serif;
-
-font-size:30px;
-font-weight:700;
-
-text-align:center;
-
-line-height:1.2;
-
-margin-bottom:6px;
-}
-
-.city{
-text-align:center;
-
-font-size:18px;
-
-margin-bottom:22px;
-}
-
-/* TABLE */
-
-.info-box{
-background:
-rgba(255,255,255,.76);
-
-border:1px solid #ead7b6;
-
-border-radius:22px;
-
-padding:12px 26px;
-
-margin-bottom:20px;
-
-backdrop-filter:blur(4px);
-}
-
-.row{
-display:grid;
-
-grid-template-columns:240px 1fr;
-
-padding:16px 0;
-
-border-bottom:1px solid #eee4d6;
-
-gap:20px;
-}
-
-.row:last-child{
-border-bottom:none;
-}
-
-.label{
-font-size:18px;
-font-weight:500;
-
-color:#3d3128;
-}
-
-.value{
-font-size:20px;
-font-weight:600;
-
-line-height:1.5;
-
-word-break:break-word;
-}
-
-.gold{
-color:#c7932e;
-}
-
-/* VALID BOX */
-
-.valid-box{
-display:flex;
-align-items:center;
-
-gap:22px;
-
-background:
-linear-gradient(
-145deg,
-#edf8e7,
-#e7f6e4
-);
-
-border:1px solid #cfe2c8;
-
-border-radius:20px;
-
-padding:20px 24px;
-
-margin-bottom:22px;
-}
-
-.valid-box i{
-font-size:64px;
-
-color:#2ec237;
-}
-
-.valid-title{
-font-size:40px;
-font-weight:700;
-
-line-height:1;
-
-color:#21872d;
-}
-
-.valid-desc{
-font-size:17px;
-
-margin-top:6px;
-
-color:#2c472f;
-}
-
-/* SIGN */
-
-.sign{
-text-align:center;
-
-margin-top:6px;
-}
-
-.sign-text{
-font-size:18px;
-
-margin-bottom:8px;
-}
-
-.sign-name{
-font-family:'Cinzel',serif;
-
-font-size:40px;
-font-weight:700;
-
-margin-bottom:4px;
-}
-
-.sign-role{
-font-size:18px;
-}
-
-/* BOTTOM ORNAMENT */
-
-.bottom-ornament{
-display:flex;
-align-items:center;
-justify-content:center;
-
-gap:14px;
-
-margin-top:18px;
-}
-
-.bottom-ornament .line{
-width:140px;
-height:2px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-#d3b06a,
-transparent
-);
-}
-
-.bottom-ornament i{
-font-size:24px;
-
-color:#d3b06a;
-}
-
-/* NOTICE */
-
-.notice{
-margin-top:16px;
-
-display:flex;
-align-items:flex-start;
-
-gap:16px;
-
-background:
-rgba(255,250,243,.9);
-
-border:1px solid #e8d8bc;
-
-border-radius:20px;
-
-padding:18px 22px;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.03);
-}
-
-.notice i{
-font-size:30px;
-
-color:#ca972c;
-}
-
-.notice-text{
-font-size:17px;
-
-line-height:1.7;
-
-color:#4a3e35;
-}
-
-/* FOOTER */
-
-footer{
-margin-top:16px;
-
-text-align:center;
-
-font-size:14px;
-
-line-height:1.9;
-
-color:#6b5b4e;
-}
-
-footer strong{
-font-size:20px;
-
-color:#2c241d;
-}
-
-footer a{
-color:#b9861f;
-
-text-decoration:none;
-
-font-weight:600;
-}
-
-footer i{
-margin-right:6px;
-}
-
-/* ================= MOBILE RESPONSIVE ================= */
-
-@media(max-width:768px){
-
-body{
-overflow-x:hidden;
-}
-
-.container{
-width:100%;
-max-width:100%;
-
-padding:14px 12px 22px;
-
-min-height:auto;
-}
-
-.logo{
-width:72px;
-
-margin-bottom:10px;
-}
-
-h1{
-font-size:18vw;
-
-line-height:0.95;
-
-letter-spacing:-1px;
-
-margin-bottom:8px;
-}
-
-.subtitle{
-font-size:11px;
-
-letter-spacing:2px;
-
-line-height:1.6;
-
-margin-bottom:14px;
-}
-
-.ornament{
-gap:10px;
-
-margin-bottom:18px;
-}
-
-.ornament .line{
-width:60px;
-}
-
-.ornament .circle{
-width:18px;
-height:18px;
-
-border-width:2px;
-}
-
-.search-wrap{
-flex-direction:column;
-
-gap:12px;
-
-margin-bottom:18px;
-}
-
-.search-box{
-height:52px;
-
-border-radius:16px;
-
-padding:0 14px;
-}
-
-.search-box i{
-font-size:18px;
-
-margin-right:10px;
-}
-
-.search-box input{
-font-size:16px;
-}
-
-button{
-width:100%;
-
-height:54px;
-
-border-radius:18px;
-
-font-size:16px;
-}
-
-.result{
-padding:16px 14px;
-
-border-radius:24px;
-}
-
-.shield{
-margin-bottom:8px;
-}
-
-.shield i{
-width:82px;
-height:82px;
-
-line-height:82px;
-
-font-size:42px;
-}
-
-.verified-title{
-font-size:13vw;
-
-line-height:1;
-
-margin-bottom:10px;
-}
-
-.desc{
-font-size:14px;
-
-line-height:1.5;
-
-margin-bottom:12px;
-}
-
-.school{
-font-size:8vw;
-
-line-height:1.2;
-
-margin-bottom:2px;
-}
-
-.city{
-font-size:14px;
-
-margin-bottom:16px;
-}
-
-.info-box{
-padding:6px 12px;
-
-border-radius:18px;
-
-margin-bottom:16px;
-}
-
-.row{
-grid-template-columns:1fr;
-
-gap:6px;
-
-padding:12px 0;
-}
-
-.label{
-font-size:14px;
-
-font-weight:600;
-}
-
-.value{
-font-size:15px;
-
-line-height:1.5;
-}
-
-.valid-box{
-padding:14px;
-
-gap:12px;
-
-border-radius:16px;
-
-margin-bottom:16px;
-}
-
-.valid-box i{
-font-size:40px;
-}
-
-.valid-title{
-font-size:28px;
-}
-
-.valid-desc{
-font-size:13px;
-
-line-height:1.4;
-}
-
-.sign{
-margin-top:4px;
-}
-
-.sign-text{
-font-size:14px;
-
-margin-bottom:6px;
-}
-
-.sign-name{
-font-size:30px;
-
-line-height:1.1;
-}
-
-.sign-role{
-font-size:14px;
-}
-
-.bottom-ornament{
-margin-top:14px;
-
-gap:10px;
-}
-
-.bottom-ornament .line{
-width:70px;
-}
-
-.bottom-ornament i{
-font-size:18px;
-}
-
-.notice{
-padding:14px;
-
-border-radius:16px;
-
-gap:12px;
-
-margin-top:14px;
-}
-
-.notice i{
-font-size:22px;
-}
-
-.notice-text{
-font-size:13px;
-
-line-height:1.6;
-}
-
-footer{
-font-size:11px;
-
-line-height:1.7;
-
-margin-top:14px;
-
-padding-bottom:20px;
-}
-
-footer strong{
-font-size:15px;
-}
-
-}
+</body>
+</html>
