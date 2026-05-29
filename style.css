@@ -421,3 +421,36 @@ body{
     }
 
 }
+
+/* =======================================
+   FORCE MOBILE APP LAYOUT
+======================================= */
+
+html,
+body{
+    background:#eef2f6;
+}
+
+@media (min-width:768px){
+
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+    }
+
+    .container{
+
+        width:430px;
+        max-width:430px;
+
+        background:#fff;
+
+        min-height:100vh;
+
+        box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+
+    }
+
+}
