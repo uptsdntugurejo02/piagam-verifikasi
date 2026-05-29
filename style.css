@@ -421,3 +421,63 @@ body{
     }
 
 }
+
+/* LANDSCAPE PHONE FIX */
+
+@media (max-height: 500px) and (orientation: landscape){
+
+    .container{
+        padding:20px 20px 40px;
+    }
+
+    .verified-circle{
+        width:90px;
+        height:90px;
+    }
+
+    .verified-circle i{
+        font-size:42px;
+    }
+
+    .title{
+        font-size:28px;
+        margin-bottom:10px;
+    }
+
+    .subtitle{
+        font-size:14px;
+        margin-bottom:20px;
+    }
+
+    .file-card{
+        padding:18px;
+        margin-bottom:24px;
+    }
+
+    .file-name{
+        font-size:16px;
+    }
+
+    .file-desc{
+        font-size:13px;
+    }
+
+    .view-btn{
+        height:48px;
+        font-size:16px;
+    }
+
+    .school-name{
+        font-size:16px;
+    }
+
+    .school-location{
+        font-size:13px;
+    }
+
+    .detail-label,
+    .detail-value{
+        font-size:14px;
+    }
+
+}
